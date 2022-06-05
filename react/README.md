@@ -7,9 +7,9 @@ Research, studies, and practice on ReactJS.
 - State / Props
 - Update parent's state
 - [Fetch API](/react/pages/fetch/index.js)
-- [Handle Form submit](/react/pages/form/index.js)
+- [Handle Form submit](/react/pages/form)
 - [Context API](/react/pages/context/index.js)
-- Event handlers
+- [Event handlers](/react/pages/form)
 
 ## UI / Component
 
