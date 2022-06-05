@@ -26,7 +26,7 @@ export const Home = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    console.log('heey', name, phone, country);
+    console.log('submit all data', name, phone, country);
   };
 
   const handleName = (e) => setName(e.target.value);
