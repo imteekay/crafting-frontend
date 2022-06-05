@@ -9,6 +9,7 @@ Research, studies, and practice on ReactJS.
 - [Fetch API](/react/pages/fetch/index.js)
 - [Handle Form submit](/react/pages/form/index.js)
 - [Context API](/react/pages/context/index.js)
+- Event handlers
 
 ## UI / Component
 
