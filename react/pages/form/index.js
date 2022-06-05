@@ -24,6 +24,8 @@ export const Home = () => {
   const [phone, setPhone] = useState('');
   const [country, setCountry] = useState('');
 
+  const [counter, setCounter] = useState(0);
+
   const onSubmitForm = (event) => {
     event.preventDefault();
     console.log('submit all data', name, phone, country);
@@ -32,6 +34,11 @@ export const Home = () => {
   const handleName = (e) => setName(e.target.value);
   const handlePhone = (e) => setPhone(e.target.value);
   const handleCountry = (e) => setCountry(e.target.value);
+
+  const handleKeyDown = (e) => console.log(e.key);
+
+  const incrementCounter = () => setCounter(counter + 1);
+  const decrementCounter = () => setCounter(counter - 1);
 
   return (
     <>
@@ -65,6 +72,14 @@ export const Home = () => {
       <p>name: {name}</p>
       <p>phone: {phone}</p>
       <p>country: {country}</p>
+
+      <input onKeyDown={handleKeyDown}></input>
+
+      <div>
+        {counter}
+        <button onClick={incrementCounter}>+</button>
+        <button onClick={decrementCounter}>-</button>
+      </div>
     </>
   );
 };
