@@ -17,7 +17,7 @@ Research, studies, and practice on ReactJS.
 - Modal
 - Tabs
 - Input
-- Tag Input
+- [Tag Input](/react/pages/tag-input)
 
 ## Apps
 
