@@ -5,7 +5,7 @@ Research, studies, and practice on ReactJS.
 ## Basic concepts
 
 - State / Props
-- Update parent's state
+- [Update parent's state](/react/pages/parent-state/index.js)
 - [Fetch API](/react/pages/fetch/index.js)
 - [Handle Form submit](/react/pages/form)
 - [Context API](/react/pages/context/index.js)
