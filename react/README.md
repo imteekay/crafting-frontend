@@ -18,6 +18,7 @@ Research, studies, and practice on ReactJS.
 - Tabs
 - Input
 - [Tag Input](/react/pages/tag-input)
+- [Progress Bar](/react/pages/progress-bar)
 
 ## Apps
 
