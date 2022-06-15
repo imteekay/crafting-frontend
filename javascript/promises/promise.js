@@ -7,12 +7,16 @@ class Promis {
 
   constructor(resolver) {
     this.status = this.Statuses.Pending;
-    this.data;
+    this.data = null;
 
-    resolver(
-      (data) => this.resolve(data),
-      (data) => this.reject(data)
-    );
+    try {
+      resolver(
+        (data) => this.resolve(data),
+        (error) => this.reject(error)
+      );
+    } catch (error) {
+      this.reject(error);
+    }
   }
 
   static all() {}
@@ -68,8 +72,8 @@ promis1.then(
   (data) => {
     console.log('success', data);
   },
-  (data) => {
-    console.log('failure', data);
+  (error) => {
+    console.log('failure', error);
   }
 );
 
@@ -79,13 +83,13 @@ promis2.then(
   (data) => {
     console.log('success', data);
   },
-  (data) => {
-    console.log('failure', data);
+  (error) => {
+    console.log('failure', error);
   }
 );
 
 const wait = (ms) =>
-  new Promise((resolve, reject) => {
+  new Promis((resolve, reject) => {
     setTimeout(() => {
       resolve(`done after ${ms}ms`);
     }, ms);
