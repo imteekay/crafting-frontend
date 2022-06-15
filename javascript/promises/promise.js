@@ -8,6 +8,8 @@ class Promis {
   constructor(resolver) {
     this.status = this.Statuses.Pending;
     this.data = null;
+    this.onFulfillmentCallbacks = [];
+    this.onRejectionCallbacks = [];
 
     try {
       resolver(
@@ -28,6 +30,7 @@ class Promis {
 
   catch() {}
   finally() {}
+
   then(onFulfillment, onRejection) {
     if (this.status === this.Statuses.Fulfilled) {
       onFulfillment(this.data);
@@ -36,12 +39,21 @@ class Promis {
     if (this.status === this.Statuses.Rejected) {
       onRejection(this.data);
     }
+
+    if (this.status === this.Statuses.Pending) {
+      this.onFulfillmentCallbacks.push(onFulfillment);
+      this.onRejectionCallbacks.push(onRejection);
+    }
   }
 
   resolve(data) {
     if (this.status === this.Statuses.Pending) {
       this.status = this.Statuses.Fulfilled;
       this.data = data;
+
+      this.onFulfillmentCallbacks.forEach((onFulfillment) =>
+        onFulfillment(data)
+      );
     }
   }
 
@@ -49,6 +61,8 @@ class Promis {
     if (this.status === this.Statuses.Pending) {
       this.status = this.Statuses.Rejected;
       this.data = data;
+
+      this.onRejectionCallbacks.forEach((onRejection) => onRejection(data));
     }
   }
 }
