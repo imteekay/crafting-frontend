@@ -6,6 +6,7 @@ Research, studies, and practice on Frontend.
 
 - [Architecture](architecture)
 - [React](react)
+- [JavaScript](javascript)
 
 ## License
 
