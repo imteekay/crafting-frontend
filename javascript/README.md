@@ -1,3 +1,3 @@
 # JavaScript
 
-- Promises
+- [Promises](promises)
