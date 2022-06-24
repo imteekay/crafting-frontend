@@ -11,3 +11,7 @@
 - .reject()
 - .resolve()
 - .prototype.then()
+
+## Examples
+
+- [Example Promise 1](promise1.js)
