@@ -41,6 +41,7 @@ function deepEqual(valueOne, valueTwo) {
 
   if (valueOneType === Types.NaN && valueTwoType === Types.NaN) return true;
   if (valueOneType === Types.null && valueTwoType === Types.null) return true;
+  if (valueOneType === Types.null || valueTwoType === Types.null) return false;
   if (valueOneType === Types.undefined && valueTwoType === Types.undefined)
     return true;
 
@@ -88,6 +89,7 @@ console.log();
 console.log(deepEqual(null, null) === true);
 console.log(deepEqual(undefined, undefined) === true);
 console.log(deepEqual(NaN, NaN) === true);
+console.log(deepEqual(null, 1) === false);
 console.log(deepEqual(1, '1') === false);
 console.log(deepEqual(1, true) === false);
 console.log(deepEqual('a', true) === false);
@@ -122,3 +124,4 @@ console.log(deepEqual({ 2: [1, 2, 3] }, { 2: [1, 2] }) === false);
 console.log(deepEqual({ 2: [1, 2] }, { 2: [1, 2, 3] }) === false);
 console.log(deepEqual({ 2: { 1: 1 } }, { 2: { 1: 1 } }) === true);
 console.log(deepEqual({ 2: { 1: 1 } }, { 2: { 1: 2 } }) === false);
+console.log(deepEqual({ 1: undefined, 2: 2 }, { 2: 2, 3: 3 }) === false);
