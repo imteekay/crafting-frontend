@@ -80,6 +80,7 @@ function deepEqual(valueOne, valueTwo) {
   return isDeepEqual;
 }
 
+// get type of
 console.log(getType(1));
 console.log(getType('a'));
 console.log(getType(true));
