@@ -45,10 +45,10 @@ class EventEmiter {
   }
 }
 
-const eventEmitet = new EventEmiter();
+const eventEmiter = new EventEmiter();
 
 const fn1 = (param1, param2) => console.log('test 1', param1, param2);
 
-eventEmitet.once('test', fn1);
-eventEmitet.emit('test', 'param1', 'param2'); // log param1, param2
-eventEmitet.emit('test', 'param1', 'param2'); // log nothing
+eventEmiter.once('test', fn1);
+eventEmiter.emit('test', 'param1', 'param2'); // log param1, param2
+eventEmiter.emit('test', 'param1', 'param2'); // log nothing
