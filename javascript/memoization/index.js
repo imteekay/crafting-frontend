@@ -1,4 +1,4 @@
-function memoize(fn) {
+export function memoize(fn) {
   const cache = new Map();
 
   return (...args) => {
@@ -14,17 +14,3 @@ function memoize(fn) {
     return result;
   };
 }
-
-function sum(a, b) {
-  return a + b;
-}
-
-const memoizedSum = memoize(sum);
-
-let result;
-
-result = memoizedSum(1, 1); // 2
-console.log(result);
-
-result = memoizedSum(1, 1); // 2
-console.log(result);
