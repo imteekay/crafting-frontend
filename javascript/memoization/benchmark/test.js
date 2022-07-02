@@ -1,7 +1,7 @@
-export function getNumbers() {
+export function getNumbers(limit = 1000000) {
   let numbers = [];
 
-  for (let i = 0; i < 1000000; i++) {
+  for (let i = 0; i < limit; i++) {
     numbers.push(i);
   }
 
