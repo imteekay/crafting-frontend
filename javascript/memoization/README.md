@@ -224,8 +224,8 @@ function factorial(number) {
 
 Without a caching mechanism, we can implement the `factorial` function using the recursion technique.
 
-- if the number if smaller than zero: returns `-1`
-- if the number if zero: returns `1`
+- if the number is smaller than zero: returns `-1`
+- if the number is zero: returns `1`
 - otherwise, return the number times the factorial of the `number - 1`
 
 ```javascript
