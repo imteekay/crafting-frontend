@@ -10,16 +10,16 @@ export function getNumbers(limit = 1000000) {
 
 export function testSum(label, numbers, callback) {
   console.time(label);
-  for (let index = 0; index < numbers.length; index++) {
-    callback(numbers[index], numbers[index]);
+  for (let number of numbers) {
+    callback(number, number);
   }
   console.timeEnd(label);
 }
 
 export function testFactorial(label, numbers, callback) {
   console.time(label);
-  for (let index = 0; index < numbers.length; index++) {
-    callback(numbers[index]);
+  for (let number of numbers) {
+    callback(number);
   }
   console.timeEnd(label);
 }
