@@ -1,6 +1,6 @@
 import { memoizedSum } from './sum.js';
 import { memoizedFactorial } from './factorial.js';
-import { testSum, getNumbers, start, end } from './test.js';
+import { testSum, testFactorial, getNumbers, start, end } from './test.js';
 
 let numbers = getNumbers();
 
@@ -12,6 +12,6 @@ end();
 numbers = getNumbers(10000);
 
 start('factorial');
-testSum('cold', numbers, memoizedFactorial);
-testSum('cached', numbers, memoizedFactorial);
+testFactorial('cold', numbers, memoizedFactorial);
+testFactorial('cached', numbers, memoizedFactorial);
 end();

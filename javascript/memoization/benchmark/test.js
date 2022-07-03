@@ -16,6 +16,14 @@ export function testSum(label, numbers, callback) {
   console.timeEnd(label);
 }
 
+export function testFactorial(label, numbers, callback) {
+  console.time(label);
+  for (let index = 0; index < numbers.length; index++) {
+    callback(numbers[index]);
+  }
+  console.timeEnd(label);
+}
+
 export const start = (label) => console.log(`-------- ${label} --------`);
 export const end = () => {
   console.log('-------- // --------');
