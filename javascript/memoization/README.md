@@ -1,5 +1,39 @@
 # Memoization
 
+- [memoize implementation](index.js)
+
+## API
+
+Run the `javascript/memoization/benchmark/index.js` file to run the comparison between the actual function and its memoized version.
+
+```bash
+node javascript/memoization/benchmark/index.js
+```
+
+### Running on the sum function
+
+The memoized version is `1.33%` faster than the pure version.
+
+```bash
+------- sum --------
+cold: 495.026ms
+cached: 371.011ms
+------- // --------
+```
+
+### Running on the factorial function
+
+The memoized version is `298%` faster than the pure version.
+
+```bash
+------ factorial ------
+cold: 572.349ms
+cached: 1.919ms
+--------- // ---------
+```
+
+## Overview
+
 The API of the memoization function should be like this:
 
 ```javascript
@@ -223,7 +257,7 @@ testFactorial('cached', numbers, memoizedFactorial);
 
 We get this (running on a MacBook Pro (13-inch, M1, 2020), Chip Apple M1, Memory 16GB machine):
 
-```javascript
+```bash
 ------ factorial ------
 cold: 572.349ms
 cached: 1.919ms
