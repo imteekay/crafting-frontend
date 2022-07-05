@@ -23,4 +23,4 @@
 
 ## Use Cases
 
-- [Retry promise calls](retries.js)
+- [Retry promise calls](use-cases/retries.js)
