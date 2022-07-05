@@ -4,3 +4,4 @@
 - [Memoization](memoization)
 - [Event Emitter](event-emitter)
 - [Debounce](debounce)
+- [Throttle](throttle)

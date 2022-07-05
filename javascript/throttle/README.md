@@ -1,0 +1,3 @@
+# Throttle
+
+[Example](index.js)
