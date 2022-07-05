@@ -24,3 +24,4 @@
 ## Use Cases
 
 - [Retry promise calls](use-cases/retries.js)
+- [Delay promise-based](use-cases/delay.js)
