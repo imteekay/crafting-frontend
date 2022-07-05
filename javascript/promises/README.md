@@ -1,5 +1,8 @@
 # Promise
 
+- [Promise from scratch](promise.js)
+- [Promise.all from scratch](promiseAll.js)
+
 ## API
 
 - .all()
@@ -12,6 +15,12 @@
 - .resolve()
 - .prototype.then()
 
-## Examples
+## Using Promises — Examples
 
-- [Example Promise 1](promise1.js)
+- [Example 1](promise1.js)
+- [Example 2](promise2.js)
+- [Example 3](promise3.js)
+
+## Use Cases
+
+- [Retry promise calls](retries.js)
