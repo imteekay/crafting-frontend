@@ -27,3 +27,4 @@
 - [Delay promise-based](use-cases/delay.js)
 - [Fetch promise-based](use-cases/fetch.js)
 - [Fetch Pokemons promise-based](use-cases/fetch-pokemons.js)
+- [Request promise-based](use-cases/request.js)
