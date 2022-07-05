@@ -15,3 +15,4 @@
 - [Fetch promise-based](use-cases/fetch.js)
 - [Fetch Pokemons promise-based](use-cases/fetch-pokemons.js)
 - [Request promise-based](use-cases/request.js)
+- [Document ready promise-based](use-cases/document-ready.js)
