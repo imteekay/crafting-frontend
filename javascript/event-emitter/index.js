@@ -1,11 +1,4 @@
-/*
-  Event Emiter
-  1. `on` & `emit`
-  2. `off`
-  3. `once`
-*/
-
-class EventEmiter {
+export class EventEmitter {
   events = {};
 
   on(eventName, fn) {
@@ -44,11 +37,3 @@ class EventEmiter {
     }
   }
 }
-
-const eventEmiter = new EventEmiter();
-
-const fn1 = (param1, param2) => console.log('test 1', param1, param2);
-
-eventEmiter.once('test', fn1);
-eventEmiter.emit('test', 'param1', 'param2'); // log param1, param2
-eventEmiter.emit('test', 'param1', 'param2'); // log nothing
