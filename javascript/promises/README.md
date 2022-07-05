@@ -1,7 +1,7 @@
 # Promise
 
-- [Promise from scratch](promise.js)
-- [Promise.all from scratch](promiseAll.js)
+- [Promise from scratch](from-scratch/promise.js)
+- [Promise.all from scratch](from-scratch/promiseAll.js)
 
 ## API
 
