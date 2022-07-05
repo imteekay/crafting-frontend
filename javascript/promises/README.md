@@ -17,9 +17,9 @@
 
 ## Using Promises — Examples
 
-- [Example 1](promise1.js)
-- [Example 2](promise2.js)
-- [Example 3](promise3.js)
+- [Example 1](examples/promise1.js)
+- [Example 2](examples/promise2.js)
+- [Example 3](examples/promise3.js)
 
 ## Use Cases
 
