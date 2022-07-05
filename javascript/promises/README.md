@@ -1,19 +1,6 @@
 # Promise
 
-- [Promise from scratch](from-scratch/promise.js)
-- [Promise.all from scratch](from-scratch/promiseAll.js)
-
-## API
-
-- .all()
-- .allSettled()
-- .any()
-- .prototype.catch()
-- .prototype.finally()
-- .race()
-- .reject()
-- .resolve()
-- .prototype.then()
+[Promise from scratch](from-scratch)
 
 ## Using Promises — Examples
 
