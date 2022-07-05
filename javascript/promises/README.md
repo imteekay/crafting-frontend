@@ -25,3 +25,4 @@
 
 - [Retry promise calls](use-cases/retries.js)
 - [Delay promise-based](use-cases/delay.js)
+- [Fetch promise-based](use-cases/fetch.js)
