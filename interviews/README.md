@@ -30,6 +30,42 @@
 - What is the difference between rem and em
 - Explain vw and vh and how to use them.
 
+### React
+
+- Components
+  - Tabs
+  - Accordion
+  - Photo Gallery
+  - Other possible components - [Refer to Bootstrap's list](https://getbootstrap.com/docs/4.0/components/)
+  - Modal
+  - Input (Address delivery)
+  - Progress Bar
+- Apps
+  - Sortable Data Table (with extensions for filtering)
+  - TODO list
+  - Kanban Board
+  - Search filters
+- Games
+  - Tic-tac-toe
+  - Whack-a-mole
+  - Wordle
+  - Tetris (advanced)
+  - Snake (advanced)
+- Fetch API in react
+- State Structure
+  - Group related state
+  - Avoid contradictions in state
+  - Avoid redundant state
+  - Avoid duplication in state
+  - Avoid deeply nested state
+
 ## Resources
 
+### FAANG
+
 - [My Google Front End Interview Questions](https://medium.com/codex/my-google-front-end-interview-questions-bca96925c16a)
+
+### React
+
+- [Good practices for loading, error, and empty states in React](https://blog.whereisthemouse.com/good-practices-for-loading-error-and-empty-states-in-react)
+- [How to think about React state management](https://blog.whereisthemouse.com/how-to-think-about-react-state-management)
