@@ -64,6 +64,15 @@
 ### FAANG
 
 - [My Google Front End Interview Questions](https://medium.com/codex/my-google-front-end-interview-questions-bca96925c16a)
+- [Google JavaScript Interview With A Frontend Engineer](https://www.youtube.com/watch?v=Rs7ARD5TCFU&ab_channel=Cl%C3%A9mentMihailescu)\*\*
+- [JavaScript interview with a Google engineer](https://www.youtube.com/watch?v=10WnvBk9sZc&t=166s&ab_channel=interviewing.io)\*\*
+- [Google Frontend Interview With A Frontend Expert](https://www.youtube.com/watch?v=ai1zmNO5Z3E&ab_channel=Cl%C3%A9mentMihailescu)\*\*
+
+### JavaScript
+
+- [JS mock interview - senior](https://www.youtube.com/watch?v=8eRVxE9PEF0)
+- [Promise Interview Questions](https://www.youtube.com/watch?v=3Hgac-wHiRE&ab_channel=SofiaGoyal)\*\*
+- [Implementing a simple Promise in Javascript](https://medium.com/swlh/implement-a-simple-promise-in-javascript-20c9705f197a)\*\*
 
 ### React
 
