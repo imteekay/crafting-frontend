@@ -67,6 +67,7 @@ class Promis {
   finally() {}
 }
 
+// ============ // ============
 // Testing the Promis class.
 
 const getPromis = (condition) =>
@@ -77,6 +78,9 @@ const getPromis = (condition) =>
       reject('error');
     }
   });
+
+// ============ // ============
+// Promis: resolving a promise
 
 const promis1 = getPromis(true);
 
@@ -89,6 +93,9 @@ promis1.then(
   }
 );
 
+// ============ // ============
+// Promis: rejecting a promise
+
 const promis2 = getPromis(false);
 
 promis2.then(
@@ -100,8 +107,11 @@ promis2.then(
   }
 );
 
+// ============ // ============
+// wait based-promise function
+
 const wait = (ms) =>
-  new Promis((resolve, reject) => {
+  new Promis((resolve) => {
     setTimeout(() => {
       resolve(`done after ${ms}ms`);
     }, ms);
