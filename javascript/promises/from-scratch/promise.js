@@ -21,16 +21,6 @@ class Promis {
     }
   }
 
-  static all() {}
-  static allSettled() {}
-  static any() {}
-  static race() {}
-  static reject() {}
-  static resolve() {}
-
-  catch() {}
-  finally() {}
-
   then(onFulfillment, onRejection) {
     if (this.status === this.Statuses.Fulfilled) {
       onFulfillment(this.data);
@@ -65,11 +55,19 @@ class Promis {
       this.onRejectionCallbacks.forEach((onRejection) => onRejection(data));
     }
   }
+
+  static all() {}
+  static allSettled() {}
+  static any() {}
+  static race() {}
+  static reject() {}
+  static resolve() {}
+
+  catch() {}
+  finally() {}
 }
 
-/*
-  Testing the Promis class.
-*/
+// Testing the Promis class.
 
 const getPromis = (condition) =>
   new Promis((resolve, reject) => {
