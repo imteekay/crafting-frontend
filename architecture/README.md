@@ -8,6 +8,7 @@ Research, studies, and practice on Frontend Architecture.
 - [How to structure frontend application](https://michalzalecki.com/elegant-frontend-architecture)
 - [Front-end JavaScript single page application architecture](https://marcobotto.com/blog/frontend-javascript-single-page-application-architecture)
 - [How to reevaluate your frontend architecture](https://increment.com/frontend/how-to-reevaluate-your-frontend-architecture)
+- [A different approach to frontend architecture](https://dev.to/huytaquoc/a-different-approach-to-frontend-architecture-38d4)
 
 ## Case Studies
 
