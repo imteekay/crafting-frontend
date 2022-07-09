@@ -9,6 +9,7 @@ Research, studies, and practice on Frontend Architecture.
 - [Front-end JavaScript single page application architecture](https://marcobotto.com/blog/frontend-javascript-single-page-application-architecture)
 - [How to reevaluate your frontend architecture](https://increment.com/frontend/how-to-reevaluate-your-frontend-architecture)
 - [A different approach to frontend architecture](https://dev.to/huytaquoc/a-different-approach-to-frontend-architecture-38d4)
+- [Clean Architecture on Frontend](https://bespoyasov.me/blog/clean-architecture-on-frontend)
 
 ## Case Studies
 
