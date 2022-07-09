@@ -6,6 +6,7 @@ Research, studies, and practice on Frontend Architecture.
 
 - [Practical frontend architecture](https://jaredgorski.org/writing/14-practical-frontend-architecture)
 - [How to structure frontend application](https://michalzalecki.com/elegant-frontend-architecture)
+- [Front-end JavaScript single page application architecture](https://marcobotto.com/blog/frontend-javascript-single-page-application-architecture)
 
 ## Case Studies
 
