@@ -2,6 +2,10 @@
 
 Research, studies, and practice on Frontend Architecture.
 
+## Frontend Design & Architecture
+
+- [Practical frontend architecture](https://jaredgorski.org/writing/14-practical-frontend-architecture)
+
 ## Case Studies
 
 - [Prototyping a Smoother Map](https://medium.com/google-design/google-maps-cb0326d165f5)

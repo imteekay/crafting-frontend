@@ -120,3 +120,8 @@ const wait = (ms) =>
 wait(1000).then((data) => {
   console.log(data);
 });
+
+// ============ // ============
+// Promis: .all
+
+// Promis.all(prom);
