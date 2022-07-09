@@ -10,6 +10,7 @@ Research, studies, and practice on Frontend Architecture.
 - [How to reevaluate your frontend architecture](https://increment.com/frontend/how-to-reevaluate-your-frontend-architecture)
 - [A different approach to frontend architecture](https://dev.to/huytaquoc/a-different-approach-to-frontend-architecture-38d4)
 - [Clean Architecture on Frontend](https://bespoyasov.me/blog/clean-architecture-on-frontend)
+- [Clean Architecture](https://www.youtube.com/watch?v=ThgqBecaq_w&ab_channel=DoNotMerge)
 
 ## Case Studies
 
