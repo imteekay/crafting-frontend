@@ -5,6 +5,7 @@ Research, studies, and practice on Frontend Architecture.
 ## Frontend Design & Architecture
 
 - [Practical frontend architecture](https://jaredgorski.org/writing/14-practical-frontend-architecture)
+- [How to structure frontend application](https://michalzalecki.com/elegant-frontend-architecture)
 
 ## Case Studies
 
