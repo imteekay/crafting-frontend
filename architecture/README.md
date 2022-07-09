@@ -11,6 +11,7 @@ Research, studies, and practice on Frontend Architecture.
 - [A different approach to frontend architecture](https://dev.to/huytaquoc/a-different-approach-to-frontend-architecture-38d4)
 - [Clean Architecture on Frontend](https://bespoyasov.me/blog/clean-architecture-on-frontend)
 - [Clean Architecture](https://www.youtube.com/watch?v=ThgqBecaq_w&ab_channel=DoNotMerge)
+- [How to Re-evaluate Your Frontend Architecture and Improve its Design?](https://www.simform.com/blog/frontend-architecture)
 
 ## Case Studies
 
