@@ -13,3 +13,4 @@ Research, studies, and practice on Frontend Architecture.
 
 - [Prototyping a Smoother Map](https://medium.com/google-design/google-maps-cb0326d165f5)
 - [Building the Google Photos Web UI](https://medium.com/google-design/google-photos-45b714dfbed1)
+- [About JIRA's front-end architecture](https://www.youtube.com/watch?v=CbHETl96qOk&ab_channel=HasgeekTV)
