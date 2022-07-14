@@ -13,6 +13,11 @@ Research, studies, and practice on Frontend Architecture.
 - [Clean Architecture](https://www.youtube.com/watch?v=ThgqBecaq_w&ab_channel=DoNotMerge)
 - [How to Re-evaluate Your Frontend Architecture and Improve its Design?](https://www.simform.com/blog/frontend-architecture)
 
+## Code Management & Strategy
+
+- [monorepo.tools](https://monorepo.tools)
+- [Monorepo & tools](https://www.youtube.com/watch?v=jUIxkryvWA0&list=PLakNactNC1dE8KLQ5zd3fQwu_yQHjTmR5&index=6)
+
 ## Case Studies
 
 - [Prototyping a Smoother Map](https://medium.com/google-design/google-maps-cb0326d165f5)
