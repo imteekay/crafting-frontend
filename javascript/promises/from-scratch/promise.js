@@ -34,6 +34,8 @@ class Promis {
       this.onFulfillmentCallbacks.push(onFulfillment);
       this.onRejectionCallbacks.push(onRejection);
     }
+
+    return this;
   }
 
   resolve(data) {
@@ -84,28 +86,21 @@ const getPromis = (condition) =>
 
 const promis1 = getPromis(true);
 
-promis1.then(
-  (data) => {
-    console.log('success', data);
-  },
-  (error) => {
-    console.log('failure', error);
-  }
-);
+promis1
+  .then((data) => {
+    console.log(data);
+    return 'another success';
+  })
+  .then((data) => {
+    console.log(data);
+  });
 
 // ============ // ============
 // Promis: rejecting a promise
 
 const promis2 = getPromis(false);
 
-promis2.then(
-  (data) => {
-    console.log('success', data);
-  },
-  (error) => {
-    console.log('failure', error);
-  }
-);
+promis2.then(console.log, console.log);
 
 // ============ // ============
 // wait based-promise function
