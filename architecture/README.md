@@ -18,6 +18,10 @@ Research, studies, and practice on Frontend Architecture.
 - [monorepo.tools](https://monorepo.tools)
 - [Monorepo & tools](https://www.youtube.com/watch?v=jUIxkryvWA0&list=PLakNactNC1dE8KLQ5zd3fQwu_yQHjTmR5&index=6)
 
+## Software Architecture
+
+- [Fundamentals of Software Architecture](https://www.thoughtworks.com/insights/podcasts/technology-podcasts/fundamentals-software-architecture)
+
 ## Case Studies
 
 - [Prototyping a Smoother Map](https://medium.com/google-design/google-maps-cb0326d165f5)
