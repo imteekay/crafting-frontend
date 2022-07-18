@@ -21,6 +21,7 @@ Research, studies, and practice on Frontend Architecture.
 ## Software Architecture
 
 - [Fundamentals of Software Architecture](https://www.thoughtworks.com/insights/podcasts/technology-podcasts/fundamentals-software-architecture)
+- [Book notes: Fundamentals of Software Architecture](https://danlebrero.com/2021/11/17/fundamentals-of-software-architecture-summary)
 
 ## Case Studies
 
