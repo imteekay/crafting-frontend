@@ -11,6 +11,7 @@
 ### Promises
 
 - [What is the Difference Between Promises and Observables?](https://blog.bitsrc.io/promises-vs-observables-674f4bc8ca5e)
+- [6 Promise Problems that Front-end Engineers Should Master for Interviews](https://towardsdev.com/6-promise-problems-that-front-end-engineers-should-master-for-interviews-8281848d7721)
 
 ### Design
 
