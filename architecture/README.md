@@ -12,6 +12,7 @@ Research, studies, and practice on Frontend Architecture.
 - [Clean Architecture on Frontend](https://bespoyasov.me/blog/clean-architecture-on-frontend)
 - [Clean Architecture](https://www.youtube.com/watch?v=ThgqBecaq_w&ab_channel=DoNotMerge)
 - [How to Re-evaluate Your Frontend Architecture and Improve its Design?](https://www.simform.com/blog/frontend-architecture)
+- [New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37)
 
 ## Code Management & Strategy
 
