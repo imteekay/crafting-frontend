@@ -1,4 +1,61 @@
-import { useState } from 'react';
+import { useState, createContext, useContext } from 'react';
+
+const CommentsContext = createContext();
+
+export const CommentsProvider = (props) => {
+  const [comments, setComments] = useState(initialState);
+  const [comment, setComment] = useState('');
+  const [reply, setReply] = useState('');
+
+  const handleCommentOnChange = (event) => {
+    setComment(event.target.value);
+  };
+
+  const handleCommentAdition = (event) => {
+    setComments([
+      ...comments,
+      { text: comment, author: 'TK', edited: false, replies: [] },
+    ]);
+  };
+
+  const handeReplyChange = (event) => {
+    setReply({
+      text: event.target.value,
+      author: 'TK',
+      edited: false,
+      replies: [],
+    });
+  };
+
+  const handleReply = (index) => () => {
+    setComments(
+      comments.map((comment, id) => {
+        if (index === id) {
+          return {
+            ...comment,
+            replies: [...comment.replies, reply],
+          };
+        }
+
+        return comment;
+      })
+    );
+  };
+
+  const providerValue = {
+    comments,
+    handleCommentOnChange,
+    handleCommentAdition,
+    handeReplyChange,
+    handleReply,
+  };
+
+  return (
+    <CommentsContext.Provider value={providerValue}>
+      {props.children}
+    </CommentsContext.Provider>
+  );
+};
 
 /*
 Comments Engine / Comment thread,
@@ -100,47 +157,16 @@ const Comment = ({
 );
 
 const Comments = () => {
-  const [comments, setComments] = useState(initialState);
-  const [comment, setComment] = useState('');
-  const [reply, setReply] = useState('');
-
-  const handleCommentOnChange = (event) => {
-    setComment(event.target.value);
-  };
-
-  const handleCommentAdition = (event) => {
-    setComments([
-      ...comments,
-      { text: comment, author: 'TK', edited: false, replies: [] },
-    ]);
-  };
-
-  const handeReplyChange = (event) => {
-    setReply({
-      text: event.target.value,
-      author: 'TK',
-      edited: false,
-      replies: [],
-    });
-  };
-
-  const handleReply = (index) => () => {
-    setComments(
-      comments.map((comment, id) => {
-        if (index === id) {
-          return {
-            ...comment,
-            replies: [...comment.replies, reply],
-          };
-        }
-
-        return comment;
-      })
-    );
-  };
+  const {
+    comments,
+    handleCommentOnChange,
+    handleCommentAdition,
+    handeReplyChange,
+    handleReply,
+  } = useContext(CommentsContext);
 
   return (
-    <div className="app">
+    <>
       {comments.map((comment, index) => (
         <Comment
           text={comment.text}
@@ -160,8 +186,14 @@ const Comments = () => {
         />
         <button onClick={handleCommentAdition}>add comment</button>
       </div>
-    </div>
+    </>
   );
 };
 
-export default Comments;
+const Page = () => (
+  <CommentsProvider>
+    <Comments />
+  </CommentsProvider>
+);
+
+export default Page;
