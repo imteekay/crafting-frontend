@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 /*
 Comments Engine / Comment thread,
 
@@ -36,44 +38,71 @@ Develop a Comments Engine with the following features
         ]
     }
 ]
-
 */
+
+const initialState = [
+  {
+    text: 'testing',
+    author: 'TK',
+    edited: false,
+    replies: [
+      {
+        text: 'reply',
+        author: 'TK',
+        edited: false,
+        replies: [
+          {
+            text: 'nested reply',
+            author: 'TK',
+            edited: false,
+            replies: [],
+          },
+        ],
+      },
+    ],
+  },
+];
 
 const RepliesBox = ({ commentIndex, replies }) =>
   replies.map((reply) => (
-    <div key={reply.text}>
-      <p>{reply.text}</p>
-      <p>{reply.author}</p>
-      <p>{reply.edited}</p>
+    <div key={reply.text} style={{ margin: '8px 0', paddingLeft: '16px' }}>
+      <p style={{ marginTop: '8px', marginBottom: '8px' }}>{reply.text}</p>
+      <p style={{ marginTop: '8px', marginBottom: '8px' }}>{reply.author}</p>
+      {reply.edited ? (
+        <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
+      ) : null}
       <RepliesBox replies={reply.replies} />
     </div>
   ));
 
-const NextedComments = () => {
-  const [comments, setComments] = React.useState([
-    {
-      text: 'testing',
-      author: 'TK',
-      edited: false,
-      replies: [
-        {
-          text: 'reply',
-          author: 'TK',
-          edited: false,
-          replies: [
-            {
-              text: 'nested reply',
-              author: 'TK',
-              edited: false,
-              replies: [],
-            },
-          ],
-        },
-      ],
-    },
-  ]);
-  const [comment, setComment] = React.useState('');
-  const [reply, setReply] = React.useState('');
+const Comment = ({
+  text,
+  author,
+  edited,
+  replies,
+  handeReplyChange,
+  handleReply,
+  index,
+}) => (
+  <div
+    style={{ border: '1px solid', padding: '8px', margin: '8px' }}
+    key={text}
+  >
+    <p style={{ marginTop: '8px', marginBottom: '8px' }}>{text}</p>
+    <p style={{ marginTop: '8px', marginBottom: '8px' }}>{author}</p>
+    {edited ? (
+      <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
+    ) : null}
+    <RepliesBox commentIndex={index} replies={replies} />
+    <input style={{ marginRight: '4px' }} onChange={handeReplyChange} />
+    <button onClick={handleReply(index)}>add reply</button>
+  </div>
+);
+
+const Comments = () => {
+  const [comments, setComments] = useState(initialState);
+  const [comment, setComment] = useState('');
+  const [reply, setReply] = useState('');
 
   const handleCommentOnChange = (event) => {
     setComment(event.target.value);
@@ -112,23 +141,27 @@ const NextedComments = () => {
 
   return (
     <div className="app">
-      {comments.map((comment, index) => {
-        return (
-          <div key={comment.text}>
-            <p>{comment.text}</p>
-            <p>{comment.author}</p>
-            <p>{comment.edited}</p>
-            <RepliesBox commentIndex={index} replies={comment.replies} />
-            <input onChange={handeReplyChange} />
-            <button onClick={handleReply(index)}>add reply</button>
-          </div>
-        );
-      })}
+      {comments.map((comment, index) => (
+        <Comment
+          text={comment.text}
+          author={comment.author}
+          edited={comment.edited}
+          replies={comment.replies}
+          handeReplyChange={handeReplyChange}
+          handleReply={handleReply}
+          index={index}
+        />
+      ))}
 
-      <input onChange={handleCommentOnChange} />
-      <button onClick={handleCommentAdition}>add comment</button>
+      <div style={{ margin: '8px' }}>
+        <input
+          style={{ marginRight: '4px' }}
+          onChange={handleCommentOnChange}
+        />
+        <button onClick={handleCommentAdition}>add comment</button>
+      </div>
     </div>
   );
 };
 
-export default NextedComments;
+export default Comments;
