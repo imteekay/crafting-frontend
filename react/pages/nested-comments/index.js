@@ -93,7 +93,7 @@ export const CommentsProvider = (props) => {
   );
 };
 
-const RepliesBox = ({ ids, replies }) => {
+const Replies = ({ ids, replies }) => {
   const { handeReplyChange, handleReply } = useContext(CommentsContext);
 
   return replies.map((reply, index) => {
@@ -115,7 +115,7 @@ const RepliesBox = ({ ids, replies }) => {
         {reply.edited ? (
           <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
         ) : null}
-        <RepliesBox ids={indices} replies={reply.replies} />
+        <Replies ids={indices} replies={reply.replies} />
         <input style={{ marginRight: '4px' }} onChange={handeReplyChange} />
         <button onClick={handleReply(indices)}>add reply</button>
       </div>
@@ -137,7 +137,7 @@ const Comment = ({ text, author, edited, replies, ids }) => {
       {edited ? (
         <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
       ) : null}
-      <RepliesBox ids={ids} replies={replies} />
+      <Replies ids={ids} replies={replies} />
       <input style={{ marginRight: '4px' }} onChange={handeReplyChange} />
       <button onClick={handleReply(ids)}>add reply</button>
     </div>
