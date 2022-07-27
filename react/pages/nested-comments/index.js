@@ -1,5 +1,28 @@
 import { useState, createContext, useContext } from 'react';
 
+const initialState = [
+  {
+    text: 'testing',
+    author: 'TK',
+    edited: false,
+    replies: [
+      {
+        text: 'reply',
+        author: 'TK',
+        edited: false,
+        replies: [
+          {
+            text: 'nested reply',
+            author: 'TK',
+            edited: false,
+            replies: [],
+          },
+        ],
+      },
+    ],
+  },
+];
+
 const CommentsContext = createContext();
 
 export const CommentsProvider = (props) => {
@@ -7,11 +30,24 @@ export const CommentsProvider = (props) => {
   const [comment, setComment] = useState('');
   const [reply, setReply] = useState('');
 
+  const updateReply = (comments, ids) => {
+    if (ids.length === 0) {
+      return [...comments, reply];
+    }
+
+    comments[ids[0]].replies = updateReply(
+      comments[ids[0]].replies,
+      ids.slice(1)
+    );
+
+    return [...comments];
+  };
+
   const handleCommentOnChange = (event) => {
     setComment(event.target.value);
   };
 
-  const handleCommentAdition = (event) => {
+  const handleCommentAdition = () => {
     setComments([
       ...comments,
       { text: comment, author: 'TK', edited: false, replies: [] },
@@ -27,19 +63,8 @@ export const CommentsProvider = (props) => {
     });
   };
 
-  const handleReply = (index) => () => {
-    setComments(
-      comments.map((comment, id) => {
-        if (index === id) {
-          return {
-            ...comment,
-            replies: [...comment.replies, reply],
-          };
-        }
-
-        return comment;
-      })
-    );
+  const handleReply = (ids) => () => {
+    setComments(updateReply(comments, ids));
   };
 
   const providerValue = {
@@ -97,73 +122,60 @@ Develop a Comments Engine with the following features
 ]
 */
 
-const initialState = [
-  {
-    text: 'testing',
-    author: 'TK',
-    edited: false,
-    replies: [
-      {
-        text: 'reply',
-        author: 'TK',
-        edited: false,
-        replies: [
-          {
-            text: 'nested reply',
-            author: 'TK',
-            edited: false,
-            replies: [],
-          },
-        ],
-      },
-    ],
-  },
-];
+const RepliesBox = ({ ids, replies }) => {
+  const { handeReplyChange, handleReply } = useContext(CommentsContext);
 
-const RepliesBox = ({ commentIndex, replies }) =>
-  replies.map((reply) => (
-    <div key={reply.text} style={{ margin: '8px 0', paddingLeft: '16px' }}>
-      <p style={{ marginTop: '8px', marginBottom: '8px' }}>{reply.text}</p>
-      <p style={{ marginTop: '8px', marginBottom: '8px' }}>{reply.author}</p>
-      {reply.edited ? (
+  return replies.map((reply, index) => {
+    const indices = [...ids, index];
+
+    return (
+      <div
+        key={reply.text}
+        style={{
+          border: '1px solid',
+          padding: '8px',
+          margin: '8px',
+          margin: '8px 0',
+        }}
+      >
+        <p style={{ marginTop: '8px', marginBottom: '8px' }}>
+          {reply.author}: {reply.text}
+        </p>
+        {reply.edited ? (
+          <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
+        ) : null}
+        <RepliesBox ids={indices} replies={reply.replies} />
+        <input style={{ marginRight: '4px' }} onChange={handeReplyChange} />
+        <button onClick={handleReply(indices)}>add reply</button>
+      </div>
+    );
+  });
+};
+
+const Comment = ({ text, author, edited, replies, ids }) => {
+  const { handeReplyChange, handleReply } = useContext(CommentsContext);
+
+  return (
+    <div
+      style={{ border: '1px solid', padding: '8px', margin: '8px' }}
+      key={text}
+    >
+      <p style={{ marginTop: '8px', marginBottom: '8px' }}>
+        {author}: {text}
+      </p>
+      {edited ? (
         <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
       ) : null}
-      <RepliesBox replies={reply.replies} />
+      <RepliesBox ids={ids} replies={replies} />
+      <input style={{ marginRight: '4px' }} onChange={handeReplyChange} />
+      <button onClick={handleReply(ids)}>add reply</button>
     </div>
-  ));
-
-const Comment = ({
-  text,
-  author,
-  edited,
-  replies,
-  handeReplyChange,
-  handleReply,
-  index,
-}) => (
-  <div
-    style={{ border: '1px solid', padding: '8px', margin: '8px' }}
-    key={text}
-  >
-    <p style={{ marginTop: '8px', marginBottom: '8px' }}>{text}</p>
-    <p style={{ marginTop: '8px', marginBottom: '8px' }}>{author}</p>
-    {edited ? (
-      <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
-    ) : null}
-    <RepliesBox commentIndex={index} replies={replies} />
-    <input style={{ marginRight: '4px' }} onChange={handeReplyChange} />
-    <button onClick={handleReply(index)}>add reply</button>
-  </div>
-);
+  );
+};
 
 const Comments = () => {
-  const {
-    comments,
-    handleCommentOnChange,
-    handleCommentAdition,
-    handeReplyChange,
-    handleReply,
-  } = useContext(CommentsContext);
+  const { comments, handleCommentOnChange, handleCommentAdition } =
+    useContext(CommentsContext);
 
   return (
     <>
@@ -173,9 +185,7 @@ const Comments = () => {
           author={comment.author}
           edited={comment.edited}
           replies={comment.replies}
-          handeReplyChange={handeReplyChange}
-          handleReply={handleReply}
-          index={index}
+          ids={[index]}
         />
       ))}
 
