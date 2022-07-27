@@ -1,3 +1,14 @@
+/*
+Comments Engine / Comment thread,
+
+Develop a Comments Engine with the following features
+- display a list of comments ✅
+- add a new comment ✅
+- reply to any existing comment (should support n-level Nested Replies to the comments) ✅
+- delete a comment (All children comments are deleted if a parent is deleted)
+- edit a comment, show edited flag on edited comments
+*/
+
 import { useState, createContext, useContext } from 'react';
 
 const initialState = [
@@ -81,17 +92,6 @@ export const CommentsProvider = (props) => {
     </CommentsContext.Provider>
   );
 };
-
-/*
-Comments Engine / Comment thread,
-
-Develop a Comments Engine with the following features
-- display a list of comments ✅
-- add a new comment ✅
-- reply to any existing comment (should support n-level Nested Replies to the comments) ✅
-- delete a comment (All children comments are deleted if a parent is deleted)
-- edit a comment, show edited flag on edited comments
-*/
 
 const RepliesBox = ({ ids, replies }) => {
   const { handeReplyChange, handleReply } = useContext(CommentsContext);
