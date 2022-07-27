@@ -86,9 +86,9 @@ export const CommentsProvider = (props) => {
 Comments Engine / Comment thread,
 
 Develop a Comments Engine with the following features
-- display a list of comments
-- add a new comment
-- reply to any existing comment (should support n-level Nested Replies to the comments)
+- display a list of comments ✅
+- add a new comment ✅
+- reply to any existing comment (should support n-level Nested Replies to the comments) ✅
 - delete a comment (All children comments are deleted if a parent is deleted)
 - edit a comment, show edited flag on edited comments
 
