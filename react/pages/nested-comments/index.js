@@ -91,35 +91,6 @@ Develop a Comments Engine with the following features
 - reply to any existing comment (should support n-level Nested Replies to the comments) ✅
 - delete a comment (All children comments are deleted if a parent is deleted)
 - edit a comment, show edited flag on edited comments
-
-[
-    {
-        text: '',
-        author: ''
-        edited: boolean
-        replies: [
-            {
-                text: '',
-                author: ''
-                edited: boolean
-                replies: [
-                    {
-                        text: 'this text',  // setComment
-                        author: ''
-                        edited: boolean
-                        replies: []
-                    }
-                ]
-            },
-            {
-                text: '',
-                author: ''
-                edited: boolean
-                replies: []
-            }
-        ]
-    }
-]
 */
 
 const RepliesBox = ({ ids, replies }) => {
