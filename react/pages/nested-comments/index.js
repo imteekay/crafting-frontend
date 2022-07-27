@@ -41,12 +41,12 @@ export const CommentsProvider = (props) => {
   const [comment, setComment] = useState('');
   const [reply, setReply] = useState('');
 
-  const updateReply = (comments, ids) => {
+  const addNewReply = (comments, ids) => {
     if (ids.length === 0) {
       return [...comments, reply];
     }
 
-    comments[ids[0]].replies = updateReply(
+    comments[ids[0]].replies = addNewReply(
       comments[ids[0]].replies,
       ids.slice(1)
     );
@@ -75,7 +75,7 @@ export const CommentsProvider = (props) => {
   };
 
   const handleReply = (ids) => () => {
-    setComments(updateReply(comments, ids));
+    setComments(addNewReply(comments, ids));
   };
 
   const providerValue = {
