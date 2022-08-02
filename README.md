@@ -8,6 +8,7 @@ Research, studies, and practice on Frontend.
 - [React](react)
 - [JavaScript](javascript)
 - [Interviews](interviews)
+- [Testing](testing)
 
 ## License
 
