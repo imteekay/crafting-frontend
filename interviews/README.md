@@ -64,9 +64,9 @@
 ### FAANG
 
 - [My Google Front End Interview Questions](https://medium.com/codex/my-google-front-end-interview-questions-bca96925c16a)
-- [Google JavaScript Interview With A Frontend Engineer](https://www.youtube.com/watch?v=Rs7ARD5TCFU&ab_channel=Cl%C3%A9mentMihailescu)\*\*
-- [JavaScript interview with a Google engineer](https://www.youtube.com/watch?v=10WnvBk9sZc&t=166s&ab_channel=interviewing.io)\*\*
-- [Google Frontend Interview With A Frontend Expert](https://www.youtube.com/watch?v=ai1zmNO5Z3E&ab_channel=Cl%C3%A9mentMihailescu)\*\*
+- [Google JavaScript Interview With A Frontend Engineer](https://www.youtube.com/watch?v=Rs7ARD5TCFU&ab_channel=Cl%C3%A9mentMihailescu)
+- [JavaScript interview with a Google engineer](https://www.youtube.com/watch?v=10WnvBk9sZc&t=166s&ab_channel=interviewing.io)
+- [Google Frontend Interview With A Frontend Expert](https://www.youtube.com/watch?v=ai1zmNO5Z3E&ab_channel=Cl%C3%A9mentMihailescu)
 
 ### JavaScript
 
@@ -78,3 +78,7 @@
 
 - [Good practices for loading, error, and empty states in React](https://blog.whereisthemouse.com/good-practices-for-loading-error-and-empty-states-in-react)
 - [How to think about React state management](https://blog.whereisthemouse.com/how-to-think-about-react-state-management)
+
+### Frontend System Design - Architecture
+
+- [Frontend System Design Framework](https://medium.com/@wastecleaner/frontend-system-design-framework-5ba6e075b3b2)
