@@ -33,4 +33,5 @@
 - Reduce request to backend, cache
 - Web performance: ship less JavaScript, bundle size optimization, runtime performance optimization
 - Image optimization: srcset for (responsive) images, intersection observer, download low-quality images and smoothly change to a better quality image
-- Background and caching with service workers
+- Background operation and caching with service workers
+- Code splitting and browser caching
