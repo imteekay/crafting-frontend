@@ -29,3 +29,10 @@ Research, studies, and practice on Frontend Architecture.
 - [Prototyping a Smoother Map](https://medium.com/google-design/google-maps-cb0326d165f5)
 - [Building the Google Photos Web UI](https://medium.com/google-design/google-photos-45b714dfbed1)
 - [About JIRA's front-end architecture](https://www.youtube.com/watch?v=CbHETl96qOk&ab_channel=HasgeekTV)
+
+## Infrastructure
+
+- [What is HTTP?](https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http)
+- [HOW HTTPS WORKS](https://howhttps.works)
+- [Journey to HTTP/2](https://kamranahmed.info/blog/2016/08/13/http-in-depth)
+- [HTTP/3 From A To Z: Core Concepts](https://www.smashingmagazine.com/2021/08/http3-core-concepts-part1)
