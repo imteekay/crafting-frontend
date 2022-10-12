@@ -36,3 +36,5 @@ Research, studies, and practice on Frontend Architecture.
 - [HOW HTTPS WORKS](https://howhttps.works)
 - [Journey to HTTP/2](https://kamranahmed.info/blog/2016/08/13/http-in-depth)
 - [HTTP/3 From A To Z: Core Concepts](https://www.smashingmagazine.com/2021/08/http3-core-concepts-part1)
+- [What is DNS? | How DNS works](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns)
+- [DNS and How does it work?](https://www.youtube.com/watch?v=Wj0od2ag5sk&ab_channel=theroadmap)
