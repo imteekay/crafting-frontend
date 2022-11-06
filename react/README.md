@@ -1,3 +1,5 @@
+<samp>
+
 # React
 
 Research, studies, and practice on ReactJS.
@@ -27,3 +29,5 @@ Research, studies, and practice on ReactJS.
 - Kanban Board
 - Search filters
 - [Nested Comments](/react/pages/nested-comments/index.js): [doc](/react/docs/nested-comments.md)
+
+</samp>
