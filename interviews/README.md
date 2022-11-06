@@ -63,6 +63,9 @@
 
 ## Resources
 
+- [Great Frontend: prep for frontend interviews](https://www.greatfrontend.com)
+- [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com)
+
 ### FAANG
 
 - [My Google Front End Interview Questions](https://medium.com/codex/my-google-front-end-interview-questions-bca96925c16a)
