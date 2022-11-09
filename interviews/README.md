@@ -1,3 +1,5 @@
+<samp>
+
 # Interviews
 
 ## Draft
@@ -61,6 +63,9 @@
 
 ## Resources
 
+- [Great Frontend: prep for frontend interviews](https://www.greatfrontend.com)
+- [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com)
+
 ### FAANG
 
 - [My Google Front End Interview Questions](https://medium.com/codex/my-google-front-end-interview-questions-bca96925c16a)
@@ -83,3 +88,5 @@
 
 - [Frontend System Design Framework](https://medium.com/@wastecleaner/frontend-system-design-framework-5ba6e075b3b2)
 - [How to Ace Your Frontend System Design Interview](https://medium.com/@FrontendJirachi/how-to-ace-your-frontend-system-design-42c7b357416b)
+
+</samp>

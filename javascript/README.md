@@ -1,3 +1,5 @@
+<samp>
+
 # JavaScript
 
 - [Promises](promises)
@@ -21,3 +23,5 @@
 ### Under the hood
 
 - [How JavaScript Works Under the Hood, Explained for Dummies](https://javascript.plainenglish.io/how-javascript-works-under-the-hood-explained-for-dummies-216ce155183c)
+
+</samp>

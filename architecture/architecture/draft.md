@@ -1,3 +1,5 @@
+<samp>
+
 # Architecture
 
 ## Storage
@@ -35,3 +37,5 @@
 - Image optimization: srcset for (responsive) images, intersection observer, download low-quality images and smoothly change to a better quality image
 - Background operation and caching with service workers
 - Code splitting and browser caching
+
+</samp>
