@@ -65,6 +65,7 @@
 
 - [Great Frontend: prep for frontend interviews](https://www.greatfrontend.com)
 - [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com)
+- [BigFrontEnd.dev](https://bigfrontend.dev)
 - [Frontend Interview Preparation Resources](https://leetcode.com/discuss/interview-question/1074798/Frontend-Interview-Preparation-%281-4-years%29-Level-1-and-Level-2)
 
 ### FAANG
