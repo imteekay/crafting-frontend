@@ -72,6 +72,7 @@
 - [Google JavaScript Interview With A Frontend Engineer](https://www.youtube.com/watch?v=Rs7ARD5TCFU&ab_channel=Cl%C3%A9mentMihailescu)
 - [JavaScript interview with a Google engineer](https://www.youtube.com/watch?v=10WnvBk9sZc&t=166s&ab_channel=interviewing.io)
 - [Google Frontend Interview With A Frontend Expert](https://www.youtube.com/watch?v=ai1zmNO5Z3E&ab_channel=Cl%C3%A9mentMihailescu)
+- [Facebook / Meta front end engineer interview (questions, process, prep)](https://igotanoffer.com/blogs/tech/facebook-front-end-engineer-interview)
 
 ### JavaScript
 
