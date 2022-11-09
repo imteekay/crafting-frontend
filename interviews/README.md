@@ -75,6 +75,7 @@
 - [JavaScript interview with a Google engineer](https://www.youtube.com/watch?v=10WnvBk9sZc&t=166s&ab_channel=interviewing.io)
 - [Google Frontend Interview With A Frontend Expert](https://www.youtube.com/watch?v=ai1zmNO5Z3E&ab_channel=Cl%C3%A9mentMihailescu)
 - [Facebook / Meta front end engineer interview (questions, process, prep)](https://igotanoffer.com/blogs/tech/facebook-front-end-engineer-interview)
+- [8 Weeks Study Plan To Be A Frontend Engineer (MANNG edition) — Week 1](https://medium.com/@FrontendJirachi/8-weeks-study-plan-to-be-a-frontend-engineer-manng-edition-week-1-758699e61e8c)
 
 ### JavaScript
 
