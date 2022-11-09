@@ -91,5 +91,6 @@
 - [Frontend System Design Framework](https://medium.com/@wastecleaner/frontend-system-design-framework-5ba6e075b3b2)
 - [How to Ace Your Frontend System Design Interview](https://medium.com/@FrontendJirachi/how-to-ace-your-frontend-system-design-42c7b357416b)
 - [Front-End Engineer — System Design](https://www.youtube.com/c/FrontEndEngineer)
+- [Frontend Jirachi — System Design](https://www.youtube.com/channel/UCWeb5PgnIl3Dxv8lmMS0ApQ)
 
 </samp>
