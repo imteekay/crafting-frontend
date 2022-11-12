@@ -6,11 +6,11 @@ UI Challenges is my training lab to practice and improve my HTML & CSS skills
 
 ## Challenges
 
-| UI Challenge                                                        | Solution                                                                   | Code                                  |
-| ------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------- |
-| [Pokemon Card](https://dribbble.com/shots/4619445-Charmeleon)       | [:bulb:](https://imteekay.github.io/ui-challenges/pokemon-card/index.html) | [:computer:](/pokemon-card)           |
-| [Smooth Scrollable List](https://css-tricks.com/css-only-carousel/) | [:bulb:](https://imteekay.github.io/ui-challenges/smooth-scrollable-list)  | [:computer:](/smooth-scrollable-list) |
-| [Read more content](https://www.youtube.com/watch?v=kQW-MXriUIU)    | [:bulb:](https://imteekay.github.io/ui-challenges/read-more)               | [:computer:](/read-more)              |
+| UI Challenge                                                        | Solution                                                                   | Code                                   |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------- |
+| [Pokemon Card](https://dribbble.com/shots/4619445-Charmeleon)       | [:bulb:](https://imteekay.github.io/ui-challenges/pokemon-card/index.html) | [:computer:](./pokemon-card)           |
+| [Smooth Scrollable List](https://css-tricks.com/css-only-carousel/) | [:bulb:](https://imteekay.github.io/ui-challenges/smooth-scrollable-list)  | [:computer:](./smooth-scrollable-list) |
+| [Read more content](https://www.youtube.com/watch?v=kQW-MXriUIU)    | [:bulb:](https://imteekay.github.io/ui-challenges/read-more)               | [:computer:](./read-more)              |
 
 ## Copying the template to create a new challenge
 
