@@ -1,0 +1,49 @@
+body {
+  font-family: 'Arial';
+  padding: 1rem;
+  background-color: #f7f7f7;
+}
+
+.item1 {
+  background-color: chartreuse;
+}
+
+.item2 {
+  background-color: cyan;
+}
+
+.item3 {
+  background-color: lightcoral;
+}
+
+.item4 {
+  background-color: slateblue;
+}
+
+.item5 {
+  background-color: slategray;
+}
+
+/* smooth scrollable list style */
+
+.section {
+  display: flex;
+  gap: 20px;
+  max-width: 450px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding: 1rem;
+  padding: 1rem;
+  margin: 3rem auto 0;
+  border-radius: 5px;
+}
+
+.section__item {
+  display: flex;
+  flex: 0 0 300px;
+  width: 30px;
+  height: 150px;
+  scroll-snap-align: start;
+}
