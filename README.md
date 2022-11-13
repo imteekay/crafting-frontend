@@ -2,7 +2,7 @@
 
 # Crafting Frontend
 
-Research, studies, and practice on Frontend.
+Research, studies, and practice on the craft of frontend.
 
 - [Architecture](architecture)
 - [React](react)
