@@ -96,5 +96,6 @@
 - [Frontend Jirachi — System Design](https://www.youtube.com/channel/UCWeb5PgnIl3Dxv8lmMS0ApQ)
 - [Cracking the Frontend System Design Interview](https://medhatdawoud.net/blog/cracking-frontend-system-design-interview)
 - [Frontend system design interviews - the definitive guide](https://frontendmastery.com/posts/frontend-system-design-interview-guide)
+- [The complete guide to the System Design Interview in 2022](https://www.educative.io/blog/complete-guide-system-design-interview)
 
 </samp>
