@@ -95,5 +95,6 @@
 - [Front-End Engineer — System Design](https://www.youtube.com/c/FrontEndEngineer)
 - [Frontend Jirachi — System Design](https://www.youtube.com/channel/UCWeb5PgnIl3Dxv8lmMS0ApQ)
 - [Cracking the Frontend System Design Interview](https://medhatdawoud.net/blog/cracking-frontend-system-design-interview)
+- [Frontend system design interviews - the definitive guide](https://frontendmastery.com/posts/frontend-system-design-interview-guide)
 
 </samp>
