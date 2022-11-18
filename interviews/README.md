@@ -94,5 +94,6 @@
 - [How to Ace Your Frontend System Design Interview](https://medium.com/@FrontendJirachi/how-to-ace-your-frontend-system-design-42c7b357416b)
 - [Front-End Engineer — System Design](https://www.youtube.com/c/FrontEndEngineer)
 - [Frontend Jirachi — System Design](https://www.youtube.com/channel/UCWeb5PgnIl3Dxv8lmMS0ApQ)
+- [Cracking the Frontend System Design Interview](https://medhatdawoud.net/blog/cracking-frontend-system-design-interview)
 
 </samp>
