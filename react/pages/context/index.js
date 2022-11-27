@@ -2,7 +2,7 @@ import { useState, useContext, createContext } from 'react';
 
 const CountContext = createContext();
 
-const CountWrapper = () => {
+const Counter = () => {
   const [count, increment] = useState(0);
 
   return (
@@ -23,4 +23,4 @@ const IncrementButton = () => {
   return <button onClick={() => increment(count + 1)}>Increment</button>;
 };
 
-export default CountWrapper;
+export default Counter;
