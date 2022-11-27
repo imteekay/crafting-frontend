@@ -19,7 +19,7 @@ const countriesToVisit = [
   },
 ];
 
-export const Home = () => {
+const Form = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [country, setCountry] = useState('');
@@ -33,12 +33,8 @@ export const Home = () => {
   const handlePhone = (e) => setPhone(e.target.value);
   const handleCountry = (e) => setCountry(e.target.value);
 
-  const handleKeyDown = (e) => console.log(e.key);
-
   return (
     <>
-      <h1>Welcome to the form playground!</h1>
-
       <form onSubmit={onSubmitForm}>
         <label>
           name
@@ -67,10 +63,15 @@ export const Home = () => {
       <p>name: {name}</p>
       <p>phone: {phone}</p>
       <p>country: {country}</p>
-
-      <input onKeyDown={handleKeyDown}></input>
     </>
   );
 };
+
+export const Home = () => (
+  <>
+    <h1>Welcome to the form playground!</h1>
+    <Form />
+  </>
+);
 
 export default Home;
