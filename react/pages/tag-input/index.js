@@ -1,5 +1,14 @@
 import { useState } from 'react';
 
+const removeTag = (tags, tag) => {
+  const { [tag]: _, ...updatedTags } = tags;
+  return updatedTags;
+};
+
+const getTags = (tags) => Object.values(tags);
+const hasTag = (tags, tag) => (tags[tag.toLowerCase()] ? true : false);
+const isObjEmpty = (object) => Object.keys(object).length === 0;
+
 const Wrapper = ({ children, hasGap }) => (
   <div
     style={{
@@ -14,11 +23,6 @@ const Wrapper = ({ children, hasGap }) => (
   </div>
 );
 
-const removeTag = (tags, tag) => {
-  const { [tag]: _, ...updatedTags } = tags;
-  return updatedTags;
-};
-
 const Button = ({ tag, setTags }) => (
   <button
     onClick={() => setTags((tags) => removeTag(tags, tag))}
@@ -27,8 +31,6 @@ const Button = ({ tag, setTags }) => (
     X
   </button>
 );
-
-const getTags = (tags) => Object.values(tags);
 
 const Tag = ({ tag, setTags }) => (
   <span style={{ border: '1px solid', padding: '2px' }}>
@@ -44,8 +46,6 @@ const Tags = ({ tags, setTags }) => (
     ))}
   </div>
 );
-
-const hasTag = (tags, tag) => (tags[tag.toLowerCase()] ? true : false);
 
 const Input = ({ setTags }) => {
   const [newTag, setNewTag] = useState('');
@@ -64,13 +64,13 @@ const Input = ({ setTags }) => {
               [newTag]: newTag,
             }
       );
+
+      setNewTag('');
     }
   };
 
-  return <input onChange={updateTag} onKeyDown={handleEnter}></input>;
+  return <input onChange={updateTag} onKeyDown={handleEnter} value={newTag} />;
 };
-
-const isObjEmpty = (object) => Object.keys(object).length === 0;
 
 const TagInput = () => {
   const [tags, setTags] = useState({ aaa: 'aaa', bbb: 'bbb' });
