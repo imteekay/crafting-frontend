@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-const Wrapper = ({ children }) => (
+const Wrapper = ({ children, hasGap }) => (
   <div
     style={{
       padding: '4px',
       border: '1px solid',
       display: 'flex',
-      gap: '4px',
+      gap: hasGap ? '4px' : 'initial',
       width: 'fit-content',
     }}
   >
@@ -70,11 +70,15 @@ const Input = ({ setTags }) => {
   return <input onChange={updateTag} onKeyDown={handleEnter}></input>;
 };
 
+const isObjEmpty = (object) => Object.keys(object).length === 0;
+
 const TagInput = () => {
   const [tags, setTags] = useState({ aaa: 'aaa', bbb: 'bbb' });
+  const isEmpty = isObjEmpty(tags);
+  const hasGap = !isEmpty;
 
   return (
-    <Wrapper>
+    <Wrapper hasGap={hasGap}>
       <Tags tags={tags} setTags={setTags} />
       <Input setTags={setTags} />
     </Wrapper>
