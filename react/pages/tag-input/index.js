@@ -33,8 +33,10 @@ const Button = ({ tag, setTags }) => (
 );
 
 const Tag = ({ tag, setTags }) => (
-  <span style={{ border: '1px solid', padding: '2px' }}>
-    {tag}
+  <span
+    style={{ border: '1px solid', padding: '4px', display: 'flex', gap: '6px' }}
+  >
+    <span>{tag}</span>
     <Button tag={tag} setTags={setTags} />
   </span>
 );
@@ -72,8 +74,8 @@ const Input = ({ setTags }) => {
   return <input onChange={updateTag} onKeyDown={handleEnter} value={newTag} />;
 };
 
-const TagInput = () => {
-  const [tags, setTags] = useState({ aaa: 'aaa', bbb: 'bbb' });
+const TagInput = ({ defaultTags }) => {
+  const [tags, setTags] = useState(defaultTags);
   const isEmpty = isObjEmpty(tags);
   const hasGap = !isEmpty;
 
@@ -85,9 +87,11 @@ const TagInput = () => {
   );
 };
 
+const defaultTags = { tag1: 'Tag 1', tag2: 'Tag 2' };
+
 const Page = () => (
   <div style={{ margin: '16px', width: 'auto' }}>
-    <TagInput />
+    <TagInput defaultTags={defaultTags} />
   </div>
 );
 
