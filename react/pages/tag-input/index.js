@@ -62,11 +62,8 @@ const Wrapper = ({ children, defaultTags }) => {
 
   const removeTag = (tag) => {
     const { [tag]: _, ...updatedTags } = tags;
-    console.log('updatedTags', updatedTags, tag);
     setTags(updatedTags);
   };
-
-  console.log('tags', tags);
 
   const getTags = () => Object.values(tags);
   const hasTag = (tags, tag) => (tags[tag.toLowerCase()] ? true : false);
