@@ -32,11 +32,13 @@ const Button = ({ tag, setTags }) => (
   </button>
 );
 
+const Label = ({ children }) => <span>{children}</span>;
+
 const Tag = ({ tag, setTags }) => (
   <span
     style={{ border: '1px solid', padding: '4px', display: 'flex', gap: '6px' }}
   >
-    <span>{tag}</span>
+    <Label>{tag}</Label>
     <Button tag={tag} setTags={setTags} />
   </span>
 );
