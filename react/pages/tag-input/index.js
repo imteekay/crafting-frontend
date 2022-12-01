@@ -4,11 +4,11 @@ const TagInputContext = createContext();
 
 const isObjEmpty = (object) => Object.keys(object).length === 0;
 
-const Button = ({ tag }) => {
+const Button = ({ tagId }) => {
   const { removeTag } = useContext(TagInputContext);
 
   return (
-    <button onClick={() => removeTag(tag)} style={{ marginLeft: '4px' }}>
+    <button onClick={() => removeTag(tagId)} style={{ marginLeft: '4px' }}>
       X
     </button>
   );
@@ -16,12 +16,12 @@ const Button = ({ tag }) => {
 
 const Label = ({ children }) => <span>{children}</span>;
 
-const Tag = ({ tag }) => (
+const Tag = ({ tagId, tag }) => (
   <span
     style={{ border: '1px solid', padding: '4px', display: 'flex', gap: '6px' }}
   >
     <Label>{tag}</Label>
-    <Button tag={tag} />
+    <Button tagId={tagId} />
   </span>
 );
 
@@ -30,8 +30,8 @@ const Tags = () => {
 
   return (
     <div style={{ display: 'flex', gap: '4px' }}>
-      {getTags().map((tag) => (
-        <Tag tag={tag} />
+      {getTags().map(([tagId, tag]) => (
+        <Tag key={tagId} tagId={tagId} tag={tag} />
       ))}
     </div>
   );
@@ -65,7 +65,7 @@ const Wrapper = ({ children, defaultTags }) => {
     setTags(updatedTags);
   };
 
-  const getTags = () => Object.values(tags);
+  const getTags = () => Object.entries(tags);
   const hasTag = (tags, tag) => (tags[tag.toLowerCase()] ? true : false);
 
   const addTag = (newTag) =>
