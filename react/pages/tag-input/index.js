@@ -1,58 +1,45 @@
-import { useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
-const removeTag = (tags, tag) => {
-  const { [tag]: _, ...updatedTags } = tags;
-  return updatedTags;
-};
+const TagInputContext = createContext();
 
-const getTags = (tags) => Object.values(tags);
-const hasTag = (tags, tag) => (tags[tag.toLowerCase()] ? true : false);
 const isObjEmpty = (object) => Object.keys(object).length === 0;
 
-const Wrapper = ({ children, hasGap }) => (
-  <div
-    style={{
-      padding: '4px',
-      border: '1px solid',
-      display: 'flex',
-      gap: hasGap ? '4px' : 'initial',
-      width: 'fit-content',
-    }}
-  >
-    {children}
-  </div>
-);
+const Button = ({ tag }) => {
+  const { removeTag } = useContext(TagInputContext);
 
-const Button = ({ tag, setTags }) => (
-  <button
-    onClick={() => setTags((tags) => removeTag(tags, tag))}
-    style={{ marginLeft: '4px' }}
-  >
-    X
-  </button>
-);
+  return (
+    <button onClick={() => removeTag(tag)} style={{ marginLeft: '4px' }}>
+      X
+    </button>
+  );
+};
 
 const Label = ({ children }) => <span>{children}</span>;
 
-const Tag = ({ tag, setTags }) => (
+const Tag = ({ tag }) => (
   <span
     style={{ border: '1px solid', padding: '4px', display: 'flex', gap: '6px' }}
   >
     <Label>{tag}</Label>
-    <Button tag={tag} setTags={setTags} />
+    <Button tag={tag} />
   </span>
 );
 
-const Tags = ({ tags, setTags }) => (
-  <div style={{ display: 'flex', gap: '4px' }}>
-    {getTags(tags).map((tag) => (
-      <Tag tag={tag} setTags={setTags} />
-    ))}
-  </div>
-);
+const Tags = () => {
+  const { getTags } = useContext(TagInputContext);
 
-const Input = ({ setTags }) => {
+  return (
+    <div style={{ display: 'flex', gap: '4px' }}>
+      {getTags().map((tag) => (
+        <Tag tag={tag} />
+      ))}
+    </div>
+  );
+};
+
+const Input = () => {
   const [newTag, setNewTag] = useState('');
+  const { addTag } = useContext(TagInputContext);
 
   const updateTag = (event) => {
     setNewTag(event.target.value);
@@ -60,15 +47,7 @@ const Input = ({ setTags }) => {
 
   const handleEnter = (event) => {
     if (event.key === 'Enter') {
-      setTags((tags) =>
-        hasTag(tags, newTag)
-          ? tags
-          : {
-              ...tags,
-              [newTag]: newTag,
-            }
-      );
-
+      addTag(newTag);
       setNewTag('');
     }
   };
@@ -76,18 +55,61 @@ const Input = ({ setTags }) => {
   return <input onChange={updateTag} onKeyDown={handleEnter} value={newTag} />;
 };
 
-const TagInput = ({ defaultTags }) => {
+const Wrapper = ({ children, defaultTags }) => {
   const [tags, setTags] = useState(defaultTags);
   const isEmpty = isObjEmpty(tags);
   const hasGap = !isEmpty;
 
+  const removeTag = (tag) => {
+    const { [tag]: _, ...updatedTags } = tags;
+    console.log('updatedTags', updatedTags, tag);
+    setTags(updatedTags);
+  };
+
+  console.log('tags', tags);
+
+  const getTags = () => Object.values(tags);
+  const hasTag = (tags, tag) => (tags[tag.toLowerCase()] ? true : false);
+
+  const addTag = (newTag) =>
+    setTags(
+      hasTag(tags, newTag)
+        ? tags
+        : {
+            ...tags,
+            [newTag]: newTag,
+          }
+    );
+
+  const value = {
+    getTags,
+    addTag,
+    removeTag,
+  };
+
   return (
-    <Wrapper hasGap={hasGap}>
-      <Tags tags={tags} setTags={setTags} />
-      <Input setTags={setTags} />
-    </Wrapper>
+    <TagInputContext.Provider value={value}>
+      <div
+        style={{
+          padding: '4px',
+          border: '1px solid',
+          display: 'flex',
+          gap: hasGap ? '4px' : 'initial',
+          width: 'fit-content',
+        }}
+      >
+        {children}
+      </div>
+    </TagInputContext.Provider>
   );
 };
+
+const TagInput = ({ defaultTags }) => (
+  <Wrapper defaultTags={defaultTags}>
+    <Tags />
+    <Input />
+  </Wrapper>
+);
 
 const defaultTags = { tag1: 'Tag 1', tag2: 'Tag 2' };
 
