@@ -26,11 +26,11 @@ const Tag = ({ tagId, tag }) => (
 );
 
 const Tags = () => {
-  const { getTags } = useContext(TagInputContext);
+  const { allTags } = useContext(TagInputContext);
 
   return (
     <div style={{ display: 'flex', gap: '4px' }}>
-      {getTags().map(([tagId, tag]) => (
+      {allTags.map(([tagId, tag]) => (
         <Tag key={tagId} tagId={tagId} tag={tag} />
       ))}
     </div>
@@ -65,7 +65,7 @@ const Wrapper = ({ children, defaultTags }) => {
     setTags(updatedTags);
   };
 
-  const getTags = () => Object.entries(tags);
+  const allTags = Object.entries(tags);
   const hasTag = (tags, tag) => (tags[tag.toLowerCase()] ? true : false);
 
   const addTag = (newTag) =>
@@ -79,7 +79,7 @@ const Wrapper = ({ children, defaultTags }) => {
     );
 
   const value = {
-    getTags,
+    allTags,
     addTag,
     removeTag,
   };
