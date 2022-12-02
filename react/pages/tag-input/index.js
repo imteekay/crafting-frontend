@@ -66,7 +66,7 @@ const Wrapper = ({ children, defaultTags }) => {
   };
 
   const allTags = Object.entries(tags);
-  const hasTag = (tag) => (tags[tag.toLowerCase()] ? true : false);
+  const hasTag = (tag) => (tags[tag] ? true : false);
 
   const addTag = (newTag) =>
     setTags(
