@@ -69,14 +69,11 @@ const Wrapper = ({ children, defaultTags }) => {
   const hasTag = (tag) => (tags[tag] ? true : false);
 
   const addTag = (newTag) =>
-    setTags(
-      hasTag(newTag)
-        ? tags
-        : {
-            ...tags,
-            [newTag]: newTag,
-          }
-    );
+    !hasTag(newTag) &&
+    setTags({
+      ...tags,
+      [newTag]: newTag,
+    });
 
   const value = {
     allTags,
