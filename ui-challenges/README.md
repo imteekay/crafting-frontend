@@ -6,11 +6,12 @@ UI Challenges is my training lab to practice and improve my HTML & CSS skills
 
 ## Challenges
 
-| UI Challenge                                                        | Solution                                                                           | Code                                   |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------- |
-| [Pokemon Card](https://dribbble.com/shots/4619445-Charmeleon)       | [:bulb:](https://imteekay.github.io/frontend/ui-challenges/pokemon-card)           | [:computer:](./pokemon-card)           |
-| [Smooth Scrollable List](https://css-tricks.com/css-only-carousel/) | [:bulb:](https://imteekay.github.io/frontend/ui-challenges/smooth-scrollable-list) | [:computer:](./smooth-scrollable-list) |
-| [Read more content](https://www.youtube.com/watch?v=kQW-MXriUIU)    | [:bulb:](https://imteekay.github.io/frontend/ui-challenges/read-more)              | [:computer:](./read-more)              |
+| UI Challenge                                                        | Solution                                                                                    | Code                                   |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | -------------------------------------- |
+| [Pokemon Card](https://dribbble.com/shots/4619445-Charmeleon)       | [:bulb:](https://imteekay.github.io/crafting-frontend/ui-challenges/pokemon-card)           | [:computer:](./pokemon-card)           |
+| [Smooth Scrollable List](https://css-tricks.com/css-only-carousel/) | [:bulb:](https://imteekay.github.io/crafting-frontend/ui-challenges/smooth-scrollable-list) | [:computer:](./smooth-scrollable-list) |
+| [Read more content](https://www.youtube.com/watch?v=kQW-MXriUIU)    | [:bulb:](https://imteekay.github.io/crafting-frontend/ui-challenges/read-more)              | [:computer:](./read-more)              |
+| Year Progress Bar                                                   | [:bulb:](https://imteekay.github.io/crafting-frontend/ui-challenges/year-progress-bar)      | [:computer:](./year-progress-bar)      |
 
 ## Copying the template to create a new challenge
 
