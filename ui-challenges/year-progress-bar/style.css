@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.year-progress-bar {
+  border: 1px solid;
+  height: 30px;
+  width: 400px;
+  position: relative;
+}
+
+.current-progress {
+  content: '\A';
+  position: absolute;
+  background: black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
