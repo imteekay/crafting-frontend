@@ -11,11 +11,11 @@ export class EventEmitter {
 
   emit(eventName, ...args) {
     if (this.events[eventName]) {
-      for (let i = 0; i < this.events[eventName].length; i++) {
-        this.events[eventName][i].fn(...args);
+      for (let fnObject of this.events[eventName]) {
+        fnObject.fn(...args);
 
-        if (this.events[eventName][i].subscriber === 'once') {
-          this.off(eventName, this.events[eventName][i].fn);
+        if (fnObject.subscriber === 'once') {
+          this.off(eventName, fnObject.fn);
         }
       }
     }
