@@ -28,7 +28,7 @@ export class EventEmitter {
     if (this.events.has(eventName)) {
       this.events.set(
         eventName,
-        this.events[eventName].filter((event) => event.fn !== fn)
+        this.events.get(eventName).filter((event) => event.fn !== fn)
       );
     }
   }
