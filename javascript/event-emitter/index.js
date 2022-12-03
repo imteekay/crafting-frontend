@@ -1,17 +1,20 @@
 export class EventEmitter {
-  events = {};
+  events = new Map();
 
   on(eventName, fn) {
-    if (!this.events[eventName]) {
-      this.events[eventName] = [{ subscriber: 'on', fn }];
+    if (this.events.has(eventName)) {
+      this.events.set(eventName, [
+        ...this.events.get(eventName),
+        { subscriber: 'on', fn },
+      ]);
     } else {
-      this.events[eventName].push({ subscriber: 'on', fn });
+      this.events.set(eventName, [{ subscriber: 'on', fn }]);
     }
   }
 
   emit(eventName, ...args) {
-    if (this.events[eventName]) {
-      for (let fnObject of this.events[eventName]) {
+    if (this.events.has(eventName)) {
+      for (let fnObject of this.events.get(eventName)) {
         fnObject.fn(...args);
 
         if (fnObject.subscriber === 'once') {
@@ -22,18 +25,22 @@ export class EventEmitter {
   }
 
   off(eventName, fn) {
-    if (this.events[eventName]) {
-      this.events[eventName] = this.events[eventName].filter(
-        (event) => event.fn !== fn
+    if (this.events.has(eventName)) {
+      this.events.set(
+        eventName,
+        this.events[eventName].filter((event) => event.fn !== fn)
       );
     }
   }
 
   once(eventName, fn) {
-    if (!this.events[eventName]) {
-      this.events[eventName] = [{ subscriber: 'once', fn }];
+    if (this.events.has(eventName)) {
+      this.events.set(eventName, [
+        ...this.events.get(eventName),
+        { subscriber: 'once', fn },
+      ]);
     } else {
-      this.events[eventName].push({ subscriber: 'once', fn });
+      this.events.set(eventName, [{ subscriber: 'once', fn }]);
     }
   }
 }
