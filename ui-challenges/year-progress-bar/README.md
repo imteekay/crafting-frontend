@@ -1,6 +1,6 @@
 # Year Progress Bar
 
-A UI implementation for the [Year Progrss Bar]
+A UI implementation for the Year Progrss Bar.
 
 ## Challenge
 
