@@ -105,7 +105,7 @@ const TagInput = ({ defaultTags }) => (
   </Wrapper>
 );
 
-const defaultTags = { tag1: 'Tag 1', tag2: 'Tag 2' };
+const defaultTags = { tag1: 'tag1', tag2: 'tag2' };
 
 const Page = () => (
   <div style={{ margin: '16px', width: 'auto' }}>
