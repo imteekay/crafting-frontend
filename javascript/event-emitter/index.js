@@ -34,7 +34,7 @@ export class EventEmitter {
     if (this.events.has(eventName)) {
       this.events.set(eventName, [
         ...this.events.get(eventName),
-        { subscriber: 'on', fn },
+        { subscriber: type, fn },
       ]);
     } else {
       this.events.set(eventName, [{ subscriber: type, fn }]);
