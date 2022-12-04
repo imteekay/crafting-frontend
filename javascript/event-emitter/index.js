@@ -1,6 +1,17 @@
 export class EventEmitter {
   events = new Map();
 
+  once(eventName, fn) {
+    if (this.events.has(eventName)) {
+      this.events.set(eventName, [
+        ...this.events.get(eventName),
+        { subscriber: 'once', fn },
+      ]);
+    } else {
+      this.events.set(eventName, [{ subscriber: 'once', fn }]);
+    }
+  }
+
   on(eventName, fn) {
     if (this.events.has(eventName)) {
       this.events.set(eventName, [
@@ -30,17 +41,6 @@ export class EventEmitter {
         eventName,
         this.events.get(eventName).filter((event) => event.fn !== fn)
       );
-    }
-  }
-
-  once(eventName, fn) {
-    if (this.events.has(eventName)) {
-      this.events.set(eventName, [
-        ...this.events.get(eventName),
-        { subscriber: 'once', fn },
-      ]);
-    } else {
-      this.events.set(eventName, [{ subscriber: 'once', fn }]);
     }
   }
 }
