@@ -2,25 +2,11 @@ export class EventEmitter {
   events = new Map();
 
   once(eventName, fn) {
-    if (this.events.has(eventName)) {
-      this.events.set(eventName, [
-        ...this.events.get(eventName),
-        { subscriber: 'once', fn },
-      ]);
-    } else {
-      this.events.set(eventName, [{ subscriber: 'once', fn }]);
-    }
+    this._subscribe(eventName, fn, 'once');
   }
 
   on(eventName, fn) {
-    if (this.events.has(eventName)) {
-      this.events.set(eventName, [
-        ...this.events.get(eventName),
-        { subscriber: 'on', fn },
-      ]);
-    } else {
-      this.events.set(eventName, [{ subscriber: 'on', fn }]);
-    }
+    this._subscribe(eventName, fn, 'on');
   }
 
   emit(eventName, ...args) {
@@ -41,6 +27,17 @@ export class EventEmitter {
         eventName,
         this.events.get(eventName).filter((event) => event.fn !== fn)
       );
+    }
+  }
+
+  _subscribe(eventName, fn, type) {
+    if (this.events.has(eventName)) {
+      this.events.set(eventName, [
+        ...this.events.get(eventName),
+        { subscriber: 'on', fn },
+      ]);
+    } else {
+      this.events.set(eventName, [{ subscriber: type, fn }]);
     }
   }
 }
