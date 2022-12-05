@@ -18,4 +18,4 @@ eventEmitter.emit('test2', 'param2'); // log param2
 
 // unsubscribe the fn2 to the `test2` event so it shouldn't be called anymore
 eventEmitter.off('test2', fn2);
-eventEmitter.emit('test2', 'param1'); // log param1
+eventEmitter.emit('test2', 'param1'); // doesn't log anything
