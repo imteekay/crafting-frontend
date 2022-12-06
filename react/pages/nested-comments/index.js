@@ -65,6 +65,10 @@ export const CommentsProvider = (props) => {
     ]);
   };
 
+  const handleCommentDeletion = (index) => {
+    setComments(comments.filter((_, id) => id !== index));
+  };
+
   const handeReplyChange = (event) => {
     setReply({
       text: event.target.value,
@@ -84,6 +88,7 @@ export const CommentsProvider = (props) => {
     handleCommentAdition,
     handeReplyChange,
     handleReply,
+    handleCommentDeletion,
   };
 
   return (
@@ -109,9 +114,12 @@ const Replies = ({ ids, replies }) => {
           margin: '8px 0',
         }}
       >
-        <p style={{ marginTop: '8px', marginBottom: '8px' }}>
-          {reply.author}: {reply.text}
-        </p>
+        <div style={{ display: 'flex', gap: '8px' }}>
+          <p style={{ marginTop: '8px', marginBottom: '8px' }}>
+            {reply.author}: {reply.text}
+          </p>
+          <button>X</button>
+        </div>
         {reply.edited ? (
           <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
         ) : null}
@@ -123,17 +131,21 @@ const Replies = ({ ids, replies }) => {
   });
 };
 
-const Comment = ({ text, author, edited, replies, ids }) => {
-  const { handeReplyChange, handleReply } = useContext(CommentsContext);
+const Comment = ({ text, author, edited, replies, index, ids }) => {
+  const { handeReplyChange, handleReply, handleCommentDeletion } =
+    useContext(CommentsContext);
 
   return (
     <div
       style={{ border: '1px solid', padding: '8px', margin: '8px' }}
       key={text}
     >
-      <p style={{ marginTop: '8px', marginBottom: '8px' }}>
-        {author}: {text}
-      </p>
+      <div style={{ display: 'flex', gap: '8px' }}>
+        <p style={{ marginTop: '8px', marginBottom: '8px' }}>
+          {author}: {text}
+        </p>
+        <button onClick={() => handleCommentDeletion(index)}>X</button>
+      </div>
       {edited ? (
         <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
       ) : null}
@@ -156,6 +168,7 @@ const Comments = () => {
           author={comment.author}
           edited={comment.edited}
           replies={comment.replies}
+          index={index}
           ids={[index]}
         />
       ))}
