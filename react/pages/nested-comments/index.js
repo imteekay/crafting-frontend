@@ -48,9 +48,17 @@ export const CommentsProvider = (props) => {
     }
 
     const id = ids.shift();
-
     comments[id].replies = addNewReply(comments[id].replies, ids);
+    return [...comments];
+  };
 
+  const removeReply = (comments, ids, index) => {
+    if (ids.length === 0) {
+      return comments.filter((_, id) => id !== index);
+    }
+
+    const id = ids.shift();
+    comments[id].replies = removeReply(comments[id].replies, ids, index);
     return [...comments];
   };
 
@@ -65,7 +73,7 @@ export const CommentsProvider = (props) => {
     ]);
   };
 
-  const handleCommentDeletion = (index) => {
+  const handleCommentDeletion = (index) => () => {
     setComments(comments.filter((_, id) => id !== index));
   };
 
@@ -82,6 +90,10 @@ export const CommentsProvider = (props) => {
     setComments(addNewReply(comments, ids));
   };
 
+  const handleReplyDeletion = (ids, index) => () => {
+    setComments(removeReply(comments, ids, index));
+  };
+
   const providerValue = {
     comments,
     handleCommentOnChange,
@@ -89,6 +101,7 @@ export const CommentsProvider = (props) => {
     handeReplyChange,
     handleReply,
     handleCommentDeletion,
+    handleReplyDeletion,
   };
 
   return (
@@ -99,7 +112,8 @@ export const CommentsProvider = (props) => {
 };
 
 const Replies = ({ ids, replies }) => {
-  const { handeReplyChange, handleReply } = useContext(CommentsContext);
+  const { handeReplyChange, handleReply, handleReplyDeletion } =
+    useContext(CommentsContext);
 
   return replies.map((reply, index) => {
     const indices = [...ids, index];
@@ -118,7 +132,7 @@ const Replies = ({ ids, replies }) => {
           <p style={{ marginTop: '8px', marginBottom: '8px' }}>
             {reply.author}: {reply.text}
           </p>
-          <button>X</button>
+          <button onClick={handleReplyDeletion(ids, index)}>X</button>
         </div>
         {reply.edited ? (
           <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
@@ -144,7 +158,7 @@ const Comment = ({ text, author, edited, replies, index, ids }) => {
         <p style={{ marginTop: '8px', marginBottom: '8px' }}>
           {author}: {text}
         </p>
-        <button onClick={() => handleCommentDeletion(index)}>X</button>
+        <button onClick={handleCommentDeletion(index)}>X</button>
       </div>
       {edited ? (
         <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
