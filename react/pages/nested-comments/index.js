@@ -7,9 +7,39 @@ Develop a Comments Engine with the following features
 - reply to any existing comment (should support n-level Nested Replies to the comments) ✅
 - delete a comment (All children comments are deleted if a parent is deleted)
 - edit a comment, show edited flag on edited comments
+- as an author X, I can create my own comment/reply: it should show the authors name
 */
 
 import { useState, createContext, useContext } from 'react';
+
+const test = {
+  0: {
+    text: 'testing',
+    author: 'TK',
+    edited: false,
+    replies: {
+      0: {
+        text: 'reply',
+        author: 'TK',
+        edited: false,
+        replies: {
+          0: {
+            text: 'nested reply 1',
+            author: 'TK',
+            edited: false,
+            replies: [],
+          },
+          1: {
+            text: 'nested reply 2',
+            author: 'TK',
+            edited: false,
+            replies: [],
+          },
+        },
+      },
+    },
+  },
+};
 
 const initialState = [
   {
