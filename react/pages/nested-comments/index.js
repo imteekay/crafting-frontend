@@ -12,35 +12,6 @@ Develop a Comments Engine with the following features
 
 import { useState, createContext, useContext } from 'react';
 
-const test = {
-  0: {
-    text: 'testing',
-    author: 'TK',
-    edited: false,
-    replies: {
-      0: {
-        text: 'reply',
-        author: 'TK',
-        edited: false,
-        replies: {
-          0: {
-            text: 'nested reply 1',
-            author: 'TK',
-            edited: false,
-            replies: [],
-          },
-          1: {
-            text: 'nested reply 2',
-            author: 'TK',
-            edited: false,
-            replies: [],
-          },
-        },
-      },
-    },
-  },
-};
-
 const initialState = [
   {
     text: 'testing',
@@ -76,10 +47,9 @@ export const CommentsProvider = (props) => {
       return [...comments, reply];
     }
 
-    comments[ids[0]].replies = addNewReply(
-      comments[ids[0]].replies,
-      ids.slice(1)
-    );
+    const id = ids.shift();
+
+    comments[id].replies = addNewReply(comments[id].replies, ids);
 
     return [...comments];
   };
