@@ -71,6 +71,7 @@ export const CommentsProvider = (props) => {
       ...comments,
       { text: comment, author: 'TK', edited: false, replies: [] },
     ]);
+    setComment('');
   };
 
   const handleCommentDeletion = (index) => () => {
@@ -95,6 +96,7 @@ export const CommentsProvider = (props) => {
   };
 
   const providerValue = {
+    comment,
     comments,
     handleCommentOnChange,
     handleCommentAdition,
@@ -171,7 +173,7 @@ const Comment = ({ text, author, edited, replies, index, ids }) => {
 };
 
 const Comments = () => {
-  const { comments, handleCommentOnChange, handleCommentAdition } =
+  const { comment, comments, handleCommentOnChange, handleCommentAdition } =
     useContext(CommentsContext);
 
   return (
@@ -189,6 +191,7 @@ const Comments = () => {
 
       <div style={{ margin: '8px' }}>
         <input
+          value={comment}
           style={{ marginRight: '4px' }}
           onChange={handleCommentOnChange}
         />
