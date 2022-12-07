@@ -121,22 +121,17 @@ const Comment = ({ text, author, edited, replies, index, ids }) => {
   );
 };
 
-const Comments = ({ comments, ids }) => {
-  return (
-    <>
-      {comments.map((comment, index) => (
-        <Comment
-          text={comment.text}
-          author={comment.author}
-          edited={comment.edited}
-          replies={comment.replies}
-          index={index}
-          ids={ids}
-        />
-      ))}
-    </>
-  );
-};
+const Comments = ({ comments, ids }) =>
+  comments.map((comment, index) => (
+    <Comment
+      text={comment.text}
+      author={comment.author}
+      edited={comment.edited}
+      replies={comment.replies}
+      index={index}
+      ids={ids}
+    />
+  ));
 
 const Wrapper = () => {
   const { comments } = useContext(CommentsContext);
