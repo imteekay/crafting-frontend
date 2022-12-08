@@ -35,7 +35,7 @@ const initialState = [
 
 const CommentsContext = createContext();
 
-export const CommentsProvider = (props) => {
+export const CommentsProvider = ({ children }) => {
   const [comments, setComments] = useState(initialState);
   const [comment, setComment] = useState();
 
@@ -87,7 +87,7 @@ export const CommentsProvider = (props) => {
 
   return (
     <CommentsContext.Provider value={providerValue}>
-      {props.children}
+      {children}
     </CommentsContext.Provider>
   );
 };
