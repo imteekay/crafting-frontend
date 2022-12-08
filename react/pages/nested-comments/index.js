@@ -94,12 +94,18 @@ export const CommentsProvider = (props) => {
   );
 };
 
+const CommentWrapper = ({ children }) => (
+  <div style={{ border: '1px solid', padding: '8px', margin: '8px' }}>
+    {children}
+  </div>
+);
+
 const Comment = ({ text, author, edited, replies, index, ids }) => {
   const { handeCommentChange, handleCommentAddition, handleCommentDeletion } =
     useContext(CommentsContext);
 
   return (
-    <div style={{ border: '1px solid', padding: '8px', margin: '8px' }}>
+    <CommentWrapper>
       <div style={{ display: 'flex', gap: '8px' }}>
         <p style={{ marginTop: '8px', marginBottom: '8px' }}>
           {author}: {text}
@@ -114,7 +120,7 @@ const Comment = ({ text, author, edited, replies, index, ids }) => {
       <button onClick={handleCommentAddition([...ids, index])}>
         add comment
       </button>
-    </div>
+    </CommentWrapper>
   );
 };
 
