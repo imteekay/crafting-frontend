@@ -100,9 +100,20 @@ const CommentWrapper = ({ children }) => (
   </div>
 );
 
-const Comment = ({ text, author, edited, replies, index, ids }) => {
-  const { handeCommentChange, handleCommentAddition, handleCommentDeletion } =
+const AddComment = ({ ids }) => {
+  const { handeCommentChange, handleCommentAddition } =
     useContext(CommentsContext);
+
+  return (
+    <>
+      <input style={{ marginRight: '4px' }} onChange={handeCommentChange} />
+      <button onClick={handleCommentAddition(ids)}>add comment</button>
+    </>
+  );
+};
+
+const Comment = ({ text, author, edited, replies, index, ids }) => {
+  const { handleCommentDeletion } = useContext(CommentsContext);
 
   return (
     <CommentWrapper>
@@ -116,10 +127,7 @@ const Comment = ({ text, author, edited, replies, index, ids }) => {
         <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
       ) : null}
       <Comments comments={replies} ids={[...ids, index]} />
-      <input style={{ marginRight: '4px' }} onChange={handeCommentChange} />
-      <button onClick={handleCommentAddition([...ids, index])}>
-        add comment
-      </button>
+      <AddComment ids={[...ids, index]} />
     </CommentWrapper>
   );
 };
