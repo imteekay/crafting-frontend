@@ -112,7 +112,7 @@ const Comment = ({ text, author, edited, replies, index, ids }) => {
       <Comments comments={replies} ids={[...ids, index]} />
       <input style={{ marginRight: '4px' }} onChange={handeCommentChange} />
       <button onClick={handleCommentAddition([...ids, index])}>
-        add reply
+        add comment
       </button>
     </div>
   );
