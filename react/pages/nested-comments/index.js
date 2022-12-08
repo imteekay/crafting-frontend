@@ -100,6 +100,14 @@ const CommentWrapper = ({ children }) => (
   </div>
 );
 
+const CommentTextWrapper = ({ children }) => (
+  <div style={{ display: 'flex', gap: '8px' }}>{children}</div>
+);
+
+const CommentText = ({ children }) => (
+  <p style={{ marginTop: '8px', marginBottom: '8px' }}>{children}</p>
+);
+
 const DeleteCommentButton = ({ ids, index }) => {
   const { handleCommentDeletion } = useContext(CommentsContext);
   return <button onClick={handleCommentDeletion(ids, index)}>X</button>;
@@ -122,12 +130,12 @@ const Edited = ({ edited }) =>
 
 const Comment = ({ text, author, edited, replies, index, ids }) => (
   <CommentWrapper>
-    <div style={{ display: 'flex', gap: '8px' }}>
-      <p style={{ marginTop: '8px', marginBottom: '8px' }}>
+    <CommentTextWrapper>
+      <CommentText>
         {author}: {text}
-      </p>
+      </CommentText>
       <DeleteCommentButton ids={ids} index={index} />
-    </div>
+    </CommentTextWrapper>
     <Edited edited={edited} />
     <Comments comments={replies} ids={[...ids, index]} />
     <AddComment ids={[...ids, index]} />
