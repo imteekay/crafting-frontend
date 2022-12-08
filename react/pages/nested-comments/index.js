@@ -150,7 +150,7 @@ const Comment = ({ text, author, edited, replies, index, ids }) => (
   </CommentWrapper>
 );
 
-const Comments = ({ comments, ids }) =>
+const Comments = ({ comments, ids = [] }) =>
   comments.map((comment, index) => (
     <Comment
       key={`${index}-${comment.text}-${comment.author}`}
@@ -165,7 +165,7 @@ const Comments = ({ comments, ids }) =>
 
 const Wrapper = () => {
   const { comments } = useContext(CommentsContext);
-  return <Comments comments={comments} ids={[]} />;
+  return <Comments comments={comments} />;
 };
 
 const Page = () => (
