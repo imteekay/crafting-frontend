@@ -35,7 +35,7 @@ const initialState = [
 
 const CommentsContext = createContext();
 
-export const CommentsProvider = ({ children }) => {
+export const CommentsProvider = ({ children, initialState }) => {
   const [comments, setComments] = useState(initialState);
   const [comment, setComment] = useState();
 
@@ -169,7 +169,7 @@ const Wrapper = () => {
 };
 
 const Page = () => (
-  <CommentsProvider>
+  <CommentsProvider initialState={initialState}>
     <Wrapper />
   </CommentsProvider>
 );
