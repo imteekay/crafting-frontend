@@ -5,7 +5,7 @@ Develop a Comments Engine with the following features
 - display a list of comments ✅
 - add a new comment ✅
 - reply to any existing comment (should support n-level Nested Replies to the comments) ✅
-- delete a comment (All children comments are deleted if a parent is deleted) ✅
+- delete a comment (All children's comments are deleted if a parent is deleted) ✅
 */
 
 import { useState, createContext, useContext } from 'react';
