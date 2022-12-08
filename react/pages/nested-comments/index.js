@@ -99,10 +99,7 @@ const Comment = ({ text, author, edited, replies, index, ids }) => {
     useContext(CommentsContext);
 
   return (
-    <div
-      style={{ border: '1px solid', padding: '8px', margin: '8px' }}
-      key={text}
-    >
+    <div style={{ border: '1px solid', padding: '8px', margin: '8px' }}>
       <div style={{ display: 'flex', gap: '8px' }}>
         <p style={{ marginTop: '8px', marginBottom: '8px' }}>
           {author}: {text}
@@ -124,6 +121,7 @@ const Comment = ({ text, author, edited, replies, index, ids }) => {
 const Comments = ({ comments, ids }) =>
   comments.map((comment, index) => (
     <Comment
+      key={`${index}-${comment.text}-${comment.author}`}
       text={comment.text}
       author={comment.author}
       edited={comment.edited}
