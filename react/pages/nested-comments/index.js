@@ -114,13 +114,23 @@ const DeleteCommentButton = ({ ids, index }) => {
 };
 
 const AddComment = ({ ids }) => {
+  const [isReplyInputOpen, setIsReplyInputOpen] = useState(false);
   const { handeCommentChange, handleCommentAddition } =
     useContext(CommentsContext);
 
+  const handleReplyInputOpen = () => setIsReplyInputOpen(!isReplyInputOpen);
+
   return (
     <>
-      <input style={{ marginRight: '4px' }} onChange={handeCommentChange} />
-      <button onClick={handleCommentAddition(ids)}>add comment</button>
+      <span onClick={handleReplyInputOpen} style={{ marginRight: '8px' }}>
+        Reply
+      </span>
+      {isReplyInputOpen ? (
+        <>
+          <input style={{ marginRight: '4px' }} onChange={handeCommentChange} />
+          <button onClick={handleCommentAddition(ids)}>add comment</button>
+        </>
+      ) : null}
     </>
   );
 };
