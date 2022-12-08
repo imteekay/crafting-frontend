@@ -5,15 +5,14 @@ Develop a Comments Engine with the following features
 - display a list of comments ✅
 - add a new comment ✅
 - reply to any existing comment (should support n-level Nested Replies to the comments) ✅
-- delete a comment (All children comments are deleted if a parent is deleted)
-- edit a comment, show edited flag on edited comments
+- delete a comment (All children comments are deleted if a parent is deleted) ✅
 */
 
 import { useState, createContext, useContext } from 'react';
 
 const initialState = [
   {
-    text: 'testing',
+    text: 'comment',
     author: 'TK',
     edited: false,
     replies: [
@@ -38,35 +37,30 @@ const CommentsContext = createContext();
 
 export const CommentsProvider = (props) => {
   const [comments, setComments] = useState(initialState);
-  const [comment, setComment] = useState('');
-  const [reply, setReply] = useState('');
+  const [comment, setComment] = useState();
 
   const addNewReply = (comments, ids) => {
     if (ids.length === 0) {
-      return [...comments, reply];
+      return [...comments, comment];
     }
 
-    comments[ids[0]].replies = addNewReply(
-      comments[ids[0]].replies,
-      ids.slice(1)
-    );
-
+    const id = ids.shift();
+    comments[id].replies = addNewReply(comments[id].replies, ids);
     return [...comments];
   };
 
-  const handleCommentOnChange = (event) => {
-    setComment(event.target.value);
+  const removeReply = (comments, ids, index) => {
+    if (ids.length === 0) {
+      return comments.filter((_, id) => id !== index);
+    }
+
+    const id = ids.shift();
+    comments[id].replies = removeReply(comments[id].replies, ids, index);
+    return [...comments];
   };
 
-  const handleCommentAdition = () => {
-    setComments([
-      ...comments,
-      { text: comment, author: 'TK', edited: false, replies: [] },
-    ]);
-  };
-
-  const handeReplyChange = (event) => {
-    setReply({
+  const handeCommentChange = (event) => {
+    setComment({
       text: event.target.value,
       author: 'TK',
       edited: false,
@@ -74,16 +68,21 @@ export const CommentsProvider = (props) => {
     });
   };
 
-  const handleReply = (ids) => () => {
-    setComments(addNewReply(comments, ids));
+  const handleCommentAddition =
+    (ids = []) =>
+    () => {
+      setComments(addNewReply(comments, ids));
+    };
+
+  const handleCommentDeletion = (ids, index) => () => {
+    setComments(removeReply(comments, ids, index));
   };
 
   const providerValue = {
     comments,
-    handleCommentOnChange,
-    handleCommentAdition,
-    handeReplyChange,
-    handleReply,
+    handeCommentChange,
+    handleCommentAddition,
+    handleCommentDeletion,
   };
 
   return (
@@ -93,87 +92,85 @@ export const CommentsProvider = (props) => {
   );
 };
 
-const Replies = ({ ids, replies }) => {
-  const { handeReplyChange, handleReply } = useContext(CommentsContext);
+const CommentWrapper = ({ children }) => (
+  <div style={{ border: '1px solid', padding: '8px', margin: '8px' }}>
+    {children}
+  </div>
+);
 
-  return replies.map((reply, index) => {
-    const indices = [...ids, index];
+const CommentTextWrapper = ({ children }) => (
+  <div style={{ display: 'flex', gap: '8px' }}>{children}</div>
+);
 
-    return (
-      <div
-        key={reply.text}
-        style={{
-          border: '1px solid',
-          padding: '8px',
-          margin: '8px',
-          margin: '8px 0',
-        }}
-      >
-        <p style={{ marginTop: '8px', marginBottom: '8px' }}>
-          {reply.author}: {reply.text}
-        </p>
-        {reply.edited ? (
-          <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
-        ) : null}
-        <Replies ids={indices} replies={reply.replies} />
-        <input style={{ marginRight: '4px' }} onChange={handeReplyChange} />
-        <button onClick={handleReply(indices)}>add reply</button>
-      </div>
-    );
-  });
+const CommentText = ({ children }) => (
+  <p style={{ marginTop: '8px', marginBottom: '8px' }}>{children}</p>
+);
+
+const DeleteCommentButton = ({ ids, index }) => {
+  const { handleCommentDeletion } = useContext(CommentsContext);
+  return <button onClick={handleCommentDeletion(ids, index)}>X</button>;
 };
 
-const Comment = ({ text, author, edited, replies, ids }) => {
-  const { handeReplyChange, handleReply } = useContext(CommentsContext);
-
-  return (
-    <div
-      style={{ border: '1px solid', padding: '8px', margin: '8px' }}
-      key={text}
-    >
-      <p style={{ marginTop: '8px', marginBottom: '8px' }}>
-        {author}: {text}
-      </p>
-      {edited ? (
-        <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p>
-      ) : null}
-      <Replies ids={ids} replies={replies} />
-      <input style={{ marginRight: '4px' }} onChange={handeReplyChange} />
-      <button onClick={handleReply(ids)}>add reply</button>
-    </div>
-  );
-};
-
-const Comments = () => {
-  const { comments, handleCommentOnChange, handleCommentAdition } =
+const AddComment = ({ ids }) => {
+  const [isReplyInputOpen, setIsReplyInputOpen] = useState(false);
+  const { handeCommentChange, handleCommentAddition } =
     useContext(CommentsContext);
+
+  const handleReplyInputOpen = () => setIsReplyInputOpen(!isReplyInputOpen);
 
   return (
     <>
-      {comments.map((comment, index) => (
-        <Comment
-          text={comment.text}
-          author={comment.author}
-          edited={comment.edited}
-          replies={comment.replies}
-          ids={[index]}
-        />
-      ))}
-
-      <div style={{ margin: '8px' }}>
-        <input
-          style={{ marginRight: '4px' }}
-          onChange={handleCommentOnChange}
-        />
-        <button onClick={handleCommentAdition}>add comment</button>
-      </div>
+      <span onClick={handleReplyInputOpen} style={{ marginRight: '8px' }}>
+        Reply
+      </span>
+      {isReplyInputOpen ? (
+        <>
+          <input style={{ marginRight: '4px' }} onChange={handeCommentChange} />
+          <button onClick={handleCommentAddition(ids)}>add comment</button>
+        </>
+      ) : null}
     </>
   );
 };
 
+const Edited = ({ edited }) =>
+  edited ? <p style={{ marginTop: '8px', marginBottom: '8px' }}>✅</p> : null;
+
+const Comment = ({ text, author, edited, replies, index, ids }) => (
+  <CommentWrapper>
+    <CommentTextWrapper>
+      <CommentText>
+        {author}: {text}
+      </CommentText>
+      <DeleteCommentButton ids={ids} index={index} />
+    </CommentTextWrapper>
+    <Edited edited={edited} />
+    <Comments comments={replies} ids={[...ids, index]} />
+    <AddComment ids={[...ids, index]} />
+  </CommentWrapper>
+);
+
+const Comments = ({ comments, ids }) =>
+  comments.map((comment, index) => (
+    <Comment
+      key={`${index}-${comment.text}-${comment.author}`}
+      text={comment.text}
+      author={comment.author}
+      edited={comment.edited}
+      replies={comment.replies}
+      index={index}
+      ids={ids}
+    />
+  ));
+
+const Wrapper = () => {
+  const { comments } = useContext(CommentsContext);
+  return <Comments comments={comments} ids={[]} />;
+};
+
 const Page = () => (
   <CommentsProvider>
-    <Comments />
+    <Wrapper />
   </CommentsProvider>
 );
 
