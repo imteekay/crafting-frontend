@@ -4,9 +4,9 @@
 
 ## Draft
 
-- algorithm
-- javascript
 - coding
+  - algorithm
+  - javascript
 - system design
 
 ### JavaScript
