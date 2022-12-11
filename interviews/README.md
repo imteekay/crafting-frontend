@@ -82,6 +82,7 @@
 - [Google Frontend Interview With A Frontend Expert](https://www.youtube.com/watch?v=ai1zmNO5Z3E&ab_channel=Cl%C3%A9mentMihailescu)
 - [Facebook / Meta front end engineer interview (questions, process, prep)](https://igotanoffer.com/blogs/tech/facebook-front-end-engineer-interview)
 - [8 Weeks Study Plan To Be A Frontend Engineer (MANNG edition) — Week 1](https://medium.com/@FrontendJirachi/8-weeks-study-plan-to-be-a-frontend-engineer-manng-edition-week-1-758699e61e8c)
+- [Software Engineer 2 UI Interview at Microsoft](https://dev.to/dhilipkmr/software-engineer-2-ui-interview-at-microsoft-1i0b)
 
 ### JavaScript
 
