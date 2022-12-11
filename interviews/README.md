@@ -7,6 +7,7 @@
 - coding
   - algorithm
   - javascript
+  - product building: e.g. Create an email Client like MS Outlook; Create a chat interface like MS teams; Create a Notification interface like MS teams
 - system design
 
 ### JavaScript
