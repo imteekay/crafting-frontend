@@ -4,6 +4,11 @@
 
 ## Draft
 
+- algorithm
+- javascript
+- coding
+- system design
+
 ### JavaScript
 
 - Explain JavaScript main thread and worker threads. How do you communicate between main thread and worker threads? How can worker threads impact main thread?
