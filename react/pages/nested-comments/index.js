@@ -35,7 +35,7 @@ const initialState = [
 
 const CommentsContext = createContext();
 
-export const CommentsProvider = ({ children, initialState }) => {
+const CommentsProvider = ({ children, initialState }) => {
   const [comments, setComments] = useState(initialState);
   const [comment, setComment] = useState();
 
