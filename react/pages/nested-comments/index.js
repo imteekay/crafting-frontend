@@ -10,7 +10,7 @@ Develop a Comments Engine with the following features
 
 import { useState, createContext, useContext } from 'react';
 
-const initialState = [
+const initialComments = [
   {
     text: 'comment',
     author: 'TK',
@@ -35,8 +35,8 @@ const initialState = [
 
 const CommentsContext = createContext();
 
-const CommentsProvider = ({ children, initialState }) => {
-  const [comments, setComments] = useState(initialState);
+const CommentsProvider = ({ children, initialComments }) => {
+  const [comments, setComments] = useState(initialComments);
   const [comment, setComment] = useState();
 
   const addNewReply = (comments, ids) => {
@@ -169,7 +169,7 @@ const Wrapper = () => {
 };
 
 const Page = () => (
-  <CommentsProvider initialState={initialState}>
+  <CommentsProvider initialComments={initialComments}>
     <Wrapper />
   </CommentsProvider>
 );
