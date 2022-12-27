@@ -15,6 +15,7 @@ Research, studies, and practice on Frontend Architecture.
 - [Clean Architecture](https://www.youtube.com/watch?v=ThgqBecaq_w&ab_channel=DoNotMerge)
 - [How to Re-evaluate Your Frontend Architecture and Improve its Design?](https://www.simform.com/blog/frontend-architecture)
 - [New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37)
+- [Who is a frontend architect and how to become one](https://www.youtube.com/watch?v=Aam2hcvrYEs&ab_channel=MaksimIvanov)
 
 ## Code Management & Strategy
 
