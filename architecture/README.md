@@ -18,6 +18,7 @@ Research, studies, and practice on Frontend Architecture.
 - [Who is a frontend architect and how to become one](https://www.youtube.com/watch?v=Aam2hcvrYEs&ab_channel=MaksimIvanov)
 - [Front-end System Design — Develop Netflix from scratch](https://medium.com/itnext/front-end-system-design-develop-netflix-from-scratch-2bb65cb8be52)
 - [Frontend System Design — Part 1](https://hemdan.hashnode.dev/frontend-system-design-part-1)
+- [Frontend System Design — Part 2](https://hemdan.hashnode.dev/frontend-system-design-part-2)
 
 ## Code Management & Strategy
 
