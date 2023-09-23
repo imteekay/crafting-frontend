@@ -104,5 +104,10 @@
 - [Cracking the Frontend System Design Interview](https://medhatdawoud.net/blog/cracking-frontend-system-design-interview)
 - [Frontend system design interviews - the definitive guide](https://frontendmastery.com/posts/frontend-system-design-interview-guide)
 - [The complete guide to the System Design Interview in 2022](https://www.educative.io/blog/complete-guide-system-design-interview)
+- [Front-end System Design — Develop Netflix from scratch](https://medium.com/itnext/front-end-system-design-develop-netflix-from-scratch-2bb65cb8be52)
+- [Frontend System Design — Part 1](https://hemdan.hashnode.dev/frontend-system-design-part-1)
+- [Frontend System Design — Part 2](https://hemdan.hashnode.dev/frontend-system-design-part-2)
+- [Frontend High Level System Design of Youtube](https://www.youtube.com/watch?v=QJe0cBjlgog&ab_channel=UncommonGeeks)
+- [How to prepare your Frontend System Design Interview](https://www.youtube.com/watch?v=JhcW0fuR_ig&ab_channel=ICodeIt)
 
 </samp>
