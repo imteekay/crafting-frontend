@@ -20,6 +20,7 @@ Research, studies, and practice on Frontend Architecture.
 - [Frontend System Design — Part 1](https://hemdan.hashnode.dev/frontend-system-design-part-1)
 - [Frontend System Design — Part 2](https://hemdan.hashnode.dev/frontend-system-design-part-2)
 - [Frontend High Level System Design of Youtube](https://www.youtube.com/watch?v=QJe0cBjlgog&ab_channel=UncommonGeeks)
+- [How to prepare your Frontend System Design Interview](https://www.youtube.com/watch?v=JhcW0fuR_ig&ab_channel=ICodeIt)
 
 ## Code Management & Strategy
 
