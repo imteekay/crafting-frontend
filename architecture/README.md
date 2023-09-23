@@ -19,6 +19,7 @@ Research, studies, and practice on Frontend Architecture.
 - [Front-end System Design — Develop Netflix from scratch](https://medium.com/itnext/front-end-system-design-develop-netflix-from-scratch-2bb65cb8be52)
 - [Frontend System Design — Part 1](https://hemdan.hashnode.dev/frontend-system-design-part-1)
 - [Frontend System Design — Part 2](https://hemdan.hashnode.dev/frontend-system-design-part-2)
+- [Frontend High Level System Design of Youtube](https://www.youtube.com/watch?v=QJe0cBjlgog&ab_channel=UncommonGeeks)
 
 ## Code Management & Strategy
 
