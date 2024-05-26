@@ -17,6 +17,10 @@ Research, studies, and practice on Frontend Architecture.
 - [New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37)
 - [Who is a frontend architect and how to become one](https://www.youtube.com/watch?v=Aam2hcvrYEs&ab_channel=MaksimIvanov)
 
+## Data Fetching
+
+- [Data Fetching Patterns in Single-Page Applications](https://martinfowler.com/articles/data-fetch-spa.html)
+
 ## Code Management & Strategy
 
 - [monorepo.tools](https://monorepo.tools)
