@@ -13,6 +13,7 @@
 ## JavaScript
 
 - Explain JavaScript main thread and worker threads. How do you communicate between main thread and worker threads? How can worker threads impact main thread?
+  - How web workers work
 - What causes memory leak in JavaScript and how to deal with them? How would you locate memory leaks in your code?
 - If there is an infinite loop in JavaScript code, what will happen to the code and what will the user experience?
 - If a JavaScript file is 10 MB, how much memory will it take up on user's computer when it's running?
@@ -33,7 +34,6 @@
 - write an Event Emitter
 - write a `Pub-Sub class`
 - How the event loop works: tasks, microtasks
-- How web workers work
 
 ## CSS
 
