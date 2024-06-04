@@ -68,6 +68,10 @@
   - Avoid duplication in state
   - Avoid deeply nested state
 
+## System Design
+
+- [Spotify Playlist — Frontend System Architecture](https://www.iamtk.co/series/crafting-frontend/spotify-playlist-frontend-system-architecture)
+
 ## Resources
 
 - [Great Frontend: prep for frontend interviews](https://www.greatfrontend.com)
