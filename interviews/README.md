@@ -73,6 +73,7 @@
 - [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com)
 - [BigFrontEnd.dev](https://bigfrontend.dev)
 - [Frontend Interview Preparation Resources](https://leetcode.com/discuss/interview-question/1074798/Frontend-Interview-Preparation-%281-4-years%29-Level-1-and-Level-2)
+- [Front-End Prep](https://www.notion.so/evgeniiray/Front-End-Preparation-a0ac842415a04ddf9319718ea6ba22a4)
 
 ### FAANG
 
