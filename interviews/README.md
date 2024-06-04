@@ -33,6 +33,7 @@
 - write an Event Emitter
 - write a `Pub-Sub class`
 - How the event loop works: tasks, microtasks
+- How web workers work
 
 ## CSS
 
