@@ -10,7 +10,7 @@
   - product building: e.g. Create an email Client like MS Outlook; Create a chat interface like MS teams; Create a Notification interface like MS teams
 - system design
 
-### JavaScript
+## JavaScript
 
 - Explain JavaScript main thread and worker threads. How do you communicate between main thread and worker threads? How can worker threads impact main thread?
 - What causes memory leak in JavaScript and how to deal with them? How would you locate memory leaks in your code?
@@ -34,12 +34,12 @@
 - write a `Pub-Sub class`
 - How the event loop works: tasks, microtasks
 
-### CSS
+## CSS
 
 - What is the difference between rem and em
 - Explain vw and vh and how to use them.
 
-### React
+## React
 
 - Components
   - Tabs
