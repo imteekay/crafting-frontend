@@ -71,6 +71,7 @@
 ## System Design
 
 - [Spotify Playlist — Frontend System Architecture](https://www.iamtk.co/series/crafting-frontend/spotify-playlist-frontend-system-architecture)
+- Web Performance considerations
 
 ## Resources
 
