@@ -82,6 +82,16 @@
 - [Frontend Interview Preparation Resources](https://leetcode.com/discuss/interview-question/1074798/Frontend-Interview-Preparation-%281-4-years%29-Level-1-and-Level-2)
 - [Front-End Prep](https://www.notion.so/evgeniiray/Front-End-Preparation-a0ac842415a04ddf9319718ea6ba22a4)
 - [Front End System Design Fundamentals](https://www.youtube.com/watch?v=NEzu4FD25KM)
+- [Frontend System Design](https://www.youtube.com/channel/UC6YpkaZsAcAvPNt4rLiS7dg)
+- [Architecture for frontend - Hydration](https://www.youtube.com/watch?v=iR5T2HefqKk&t=12s&ab_channel=RyanCarniato)
+- [Framework for Front End System Design interviews - draft](https://pietropassarelli.com/front-end-system-design.html)
+- [Frontend Vs. Backend System Design Interviews](https://www.zhenghao.io/posts/system-design-interviews)
+- [Frontend system design - youtube](https://www.youtube.com/watch?v=x9NgcwwFp7s&ab_channel=WebDevInterview)
+- [Heuristics for Frontend System Design Interviews](https://sherryhsu.medium.com/heuristics-for-frontend-system-design-interviews-a832f8d0e836)
+- [Front-End System Design Interview Guide](https://www.youtube.com/watch?v=5llb2fGKl9s&ab_channel=JSer)
+- [Uber - Front end - Phone screen](https://leetcode.com/discuss/interview-question/1064199/uber-front-end-phone-screen-reject)
+- [Frontend System Design - Part 1](https://hemdan.hashnode.dev/frontend-system-design-part-1)
+- [Frontend System Design - Part 2](https://hemdan.hashnode.dev/frontend-system-design-part-2)
 
 ### FAANG
 
