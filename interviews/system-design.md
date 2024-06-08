@@ -13,10 +13,12 @@
 
 It's expected to clarify the scope, and requirements as necessary in the discussion
 
-- What's the feature
+- What's the feature: the define the scope and the problem | the the limits of the feature
 - What's the user flow we need to cover
 - Understand different requirements
   - Functional requirements: how will it work
+    - Core functionality
+    - High level estimation: data volumn, peak traffic
   - Non-functional requirements:
     - Different devices: desktop, mobile, tablets - think of SSR (can't use window, should use CSS media queries)
     - Which browsers should we support?
@@ -48,13 +50,15 @@ It's expected to clarify the scope, and requirements as necessary in the discuss
   - API payload
   - headers: cookie / jwt / auth token
   - GraphQL / Rest API / BFF architecture / WebSockets / Long Poling / Server-Sent Event
-- Loading
-  - Loading Spinner or Skeleton
-- Error handling
-  - Show the error in the content part
-  - Show a dialog/modal with the error description and the possibility to retry the request
-  - 401 - unauthorized: clean the cookies and redirect to the login page
-  - 403 - forbidden: redirect to a forbidden page
+- Rendering
+  - Partially render
+  - Loading indicator
+    - Loading Spinner or Skeleton
+  - Error handling
+    - Show the error in the content part
+    - Show a dialog/modal with the error description and the possibility to retry the request
+    - 401 - unauthorized: clean the cookies and redirect to the login page
+    - 403 - forbidden: redirect to a forbidden page
 - State management:
   - state contract type
   - ways to make it easy to access data in the client
