@@ -76,23 +76,6 @@
 
 ## Resources
 
-- [Great Frontend: prep for frontend interviews](https://www.greatfrontend.com)
-- [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com)
-- [BigFrontEnd.dev](https://bigfrontend.dev)
-- [Frontend Interview Preparation Resources](https://leetcode.com/discuss/interview-question/1074798/Frontend-Interview-Preparation-%281-4-years%29-Level-1-and-Level-2)
-- [Front-End Prep](https://www.notion.so/evgeniiray/Front-End-Preparation-a0ac842415a04ddf9319718ea6ba22a4)
-- [Front End System Design Fundamentals](https://www.youtube.com/watch?v=NEzu4FD25KM)
-- [Frontend System Design](https://www.youtube.com/channel/UC6YpkaZsAcAvPNt4rLiS7dg)
-- [Architecture for frontend - Hydration](https://www.youtube.com/watch?v=iR5T2HefqKk&t=12s&ab_channel=RyanCarniato)
-- [Framework for Front End System Design interviews - draft](https://pietropassarelli.com/front-end-system-design.html)
-- [Frontend Vs. Backend System Design Interviews](https://www.zhenghao.io/posts/system-design-interviews)
-- [Frontend system design - youtube](https://www.youtube.com/watch?v=x9NgcwwFp7s&ab_channel=WebDevInterview)
-- [Heuristics for Frontend System Design Interviews](https://sherryhsu.medium.com/heuristics-for-frontend-system-design-interviews-a832f8d0e836)
-- [Front-End System Design Interview Guide](https://www.youtube.com/watch?v=5llb2fGKl9s&ab_channel=JSer)
-- [Uber - Front end - Phone screen](https://leetcode.com/discuss/interview-question/1064199/uber-front-end-phone-screen-reject)
-- [Frontend System Design - Part 1](https://hemdan.hashnode.dev/frontend-system-design-part-1)
-- [Frontend System Design - Part 2](https://hemdan.hashnode.dev/frontend-system-design-part-2)
-
 ### FAANG
 
 - [My Google Front End Interview Questions](https://medium.com/codex/my-google-front-end-interview-questions-bca96925c16a)
@@ -116,17 +99,31 @@
 
 ### Frontend System Design - Architecture
 
-- [Frontend System Design Framework](https://medium.com/@wastecleaner/frontend-system-design-framework-5ba6e075b3b2)
-- [How to Ace Your Frontend System Design Interview](https://medium.com/@FrontendJirachi/how-to-ace-your-frontend-system-design-42c7b357416b)
-- [Front-End Engineer — System Design](https://www.youtube.com/c/FrontEndEngineer)
-- [Frontend Jirachi — System Design](https://www.youtube.com/channel/UCWeb5PgnIl3Dxv8lmMS0ApQ)
+- [Architecture for frontend - Hydration](https://www.youtube.com/watch?v=iR5T2HefqKk&t=12s&ab_channel=RyanCarniato)
+- [BigFrontEnd.dev](https://bigfrontend.dev)
 - [Cracking the Frontend System Design Interview](https://medhatdawoud.net/blog/cracking-frontend-system-design-interview)
-- [Frontend system design interviews - the definitive guide](https://frontendmastery.com/posts/frontend-system-design-interview-guide)
-- [The complete guide to the System Design Interview in 2022](https://www.educative.io/blog/complete-guide-system-design-interview)
+- [Framework for Front End System Design interviews - draft](https://pietropassarelli.com/front-end-system-design.html)
+- [Front End System Design Fundamentals](https://www.youtube.com/watch?v=NEzu4FD25KM)
+- [Front-End Engineer — System Design](https://www.youtube.com/c/FrontEndEngineer)
+- [Front-End Prep](https://www.notion.so/evgeniiray/Front-End-Preparation-a0ac842415a04ddf9319718ea6ba22a4)
 - [Front-end System Design — Develop Netflix from scratch](https://medium.com/itnext/front-end-system-design-develop-netflix-from-scratch-2bb65cb8be52)
+- [Front-End System Design Interview Guide](https://www.youtube.com/watch?v=5llb2fGKl9s&ab_channel=JSer)
+- [Frontend High Level System Design of Youtube](https://www.youtube.com/watch?v=QJe0cBjlgog&ab_channel=UncommonGeeks)
+- [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com)
+- [Frontend Interview Preparation Resources](https://leetcode.com/discuss/interview-question/1074798/Frontend-Interview-Preparation-%281-4-years%29-Level-1-and-Level-2)
+- [Frontend Jirachi — System Design](https://www.youtube.com/channel/UCWeb5PgnIl3Dxv8lmMS0ApQ)
+- [Frontend System Design - youtube](https://www.youtube.com/watch?v=x9NgcwwFp7s&ab_channel=WebDevInterview)
 - [Frontend System Design — Part 1](https://hemdan.hashnode.dev/frontend-system-design-part-1)
 - [Frontend System Design — Part 2](https://hemdan.hashnode.dev/frontend-system-design-part-2)
-- [Frontend High Level System Design of Youtube](https://www.youtube.com/watch?v=QJe0cBjlgog&ab_channel=UncommonGeeks)
+- [Frontend System Design Framework](https://medium.com/@wastecleaner/frontend-system-design-framework-5ba6e075b3b2)
+- [Frontend System Design interviews - the definitive guide](https://frontendmastery.com/posts/frontend-system-design-interview-guide)
+- [Frontend System Design](https://www.youtube.com/channel/UC6YpkaZsAcAvPNt4rLiS7dg)
+- [Frontend Vs. Backend System Design Interviews](https://www.zhenghao.io/posts/system-design-interviews)
+- [Great Frontend: prep for frontend interviews](https://www.greatfrontend.com)
+- [Heuristics for Frontend System Design Interviews](https://sherryhsu.medium.com/heuristics-for-frontend-system-design-interviews-a832f8d0e836)
+- [How to Ace Your Frontend System Design Interview](https://medium.com/@FrontendJirachi/how-to-ace-your-frontend-system-design-42c7b357416b)
 - [How to prepare your Frontend System Design Interview](https://www.youtube.com/watch?v=JhcW0fuR_ig&ab_channel=ICodeIt)
+- [The complete guide to the System Design Interview in 2022](https://www.educative.io/blog/complete-guide-system-design-interview)
+- [Uber - Front end - Phone screen](https://leetcode.com/discuss/interview-question/1064199/uber-front-end-phone-screen-reject)
 
 </samp>
