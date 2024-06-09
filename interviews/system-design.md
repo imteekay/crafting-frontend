@@ -53,9 +53,27 @@ Describe the various data entities, the fields they contain and which component(
   - Persistent data: it has to be sent to the server and saved into a database
     - Real database - request
   - Ephemeral data: temporary state that lasts for a short time
-    - local storage: only for the specific device
-    - web storage: small data
-    - indexed DB: more complex DB
+    - URL:
+      - Good for current page's state, storing page number, filter settings
+      - Very fragile, unsafe: visible through the URL
+    - Cookies
+      - Easy to use, easy to support.
+      - Don't trigger a re-render for a component when changing the cookie. Should do extra work
+      - Good for session management (user session, tracking user behavior, personalization - e.g. language preference)
+      - Can increase HTTP overhead (storage capacity: 4kb per origin)
+    - Local storage
+      - Persistent storage but only for the specific device
+      - Slow synchronous API
+      - Only strings (encode, decode each time if data is not string)
+      - Good for offline usage, saving drafts
+    - Session storage
+      - The session is finished when the tab is closed
+    - Cache API
+      - Storage inside service workers
+      - Good for offline mode, cache of assets like HTML, CSS, and JS
+    - Indexed DB: more complex DB
+      - Large capacity, it's fast, available in service workers
+      - Not a long term data storage (ITP - data deleted after 7 days)
 
 ## Interface Definition (API)
 
