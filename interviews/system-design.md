@@ -31,17 +31,30 @@ It's expected to clarify the scope and requirements needed in the discussion
 
 Identify the key components of the product and how they are related to each other
 
+- Separation of Concerns
+  - Client
+    - User interface, design system components
+    - "Controller" (performs the request, 'store' data in the client, provide the data to the UI)
+    - Store: states and data from the server
+  - Server: API (HTTP/WebSocket)\*
+  - Interaction between components: show the interaction with arrows
+- API requests it should handle\*
+  - HTTP methods: put, post, get
+  - WebSockets
+  - Basic payload
+    - Data contract
+- Managing state / Data model
+  - What are the states involved in the problem?
+  - Where do we store the client state?
+  - User behavior: e.g. Open dialog, click buttons, click a link, comment, create a post
+  - Managing URL: depending on the url, it will fetch something else
+
+## Interface Definition
+
 - UI / mockup for the problem
   - UI
   - Component Tree
 - User interaction / behavior
-- API requests it should handle
-  - HTTP methods: put, post, get
-  - Basic payload
-    - Data contract
-- Managing state / Data model
-  - User behavior: e.g. Open dialog, click buttons, click a link, comment, create a post
-  - Managing URL: depending on the url, it will fetch something else
 
 ## Going in-depth
 
