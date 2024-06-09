@@ -31,25 +31,41 @@ It's expected to clarify the scope and requirements needed in the discussion
 
 Identify the key components of the product and how they are related to each other
 
-- Separation of Concerns
+- Separation of Concerns: draw the rectangles and the interactions between them
   - Client
     - User interface, design system components
     - "Controller" (performs the request, 'store' data in the client, provide the data to the UI)
     - Store: states and data from the server
-  - Server: API (HTTP/WebSocket)\*
+  - Server: API (HTTP/WebSocket)
   - Interaction between components: show the interaction with arrows
-- API requests it should handle\*
-  - HTTP methods: put, post, get
-  - WebSockets
-  - Basic payload
-    - Data contract
 - Managing state / Data model
   - What are the states involved in the problem?
   - Where do we store the client state?
   - User behavior: e.g. Open dialog, click buttons, click a link, comment, create a post
   - Managing URL: depending on the url, it will fetch something else
 
-## Interface Definition
+## Data Model
+
+Describe the various data entities, the fields they contain and which component(s) they belong to
+
+- Server data: usually from a database
+- Client data
+  - Persistent data: it has to be sent to the server and saved into a database
+    - Real database - request
+  - Ephemeral data: temporary state that lasts for a short time
+    - local storage: only for the specific device
+    - web storage: small data
+    - indexed DB: more complex DB
+
+## Interface Definition (API)
+
+- API requests it should handle
+  - HTTP methods: put, post, get
+  - WebSockets
+  - Basic payload
+    - Data contract
+
+## Interface Definition (UI)
 
 - UI / mockup for the problem
   - UI
@@ -75,14 +91,6 @@ Identify the key components of the product and how they are related to each othe
     - Show a dialog/modal with the error description and the possibility to retry the request
     - 401 - unauthorized: clean the cookies and redirect to the login page
     - 403 - forbidden: redirect to a forbidden page
-- State management:
-  - state contract type
-  - ways to make it easy to access data in the client
-  - Where to store
-    - Real database - request
-    - local storage: only for the specific device
-    - web storage: small data
-    - indexed DB: more complex DB
 
 ## Going even deeper
 
