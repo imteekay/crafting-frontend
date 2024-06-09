@@ -1,23 +1,24 @@
 # System Design
 
-- General Requirements: Understanding the problem and the goal
-  - Clarifying questions
-  - Understand the problem
-  - Understand the goal of the app, feature, or component
-  - Write down all requirements
-- High-Level Architecture
-- Going in-depth
-- Going even deeper
+RADIO framework
+
+- **Requirements Exploration**: Understand the problem thoroughly and determine the scope by asking a number of clarifying questions.
+- **Architecture/High-level Design**: Identify the key components of the product and how they are related to each other.
+- **Data Model**: Describe the various data entities, the fields they contain and which component(s) they belong to.
+- **Interface Definition (API)**: Define the interface (API) between components in the product, functionality of each API, their parameters and responses.
+- **Optimizations and Deep Dive**: Discuss about possible optimization opportunities and specific areas of interest when building the product.- Requirements
 
 ## General Requirements: Understanding the problem and the goal
 
-It's expected to clarify the scope, and requirements as necessary in the discussion
+It's expected to clarify the scope and requirements needed in the discussion
 
+- Mindset: Treat your interview as product manager and engineering manager: asking question to clarify the problem
+- Behavior: Ask the questions and take notes
 - What's the feature: the define the scope and the problem | the the limits of the feature
 - What's the user flow we need to cover
 - Understand different requirements
   - Functional requirements: how will it work
-    - Core functionality
+    - Core functionality: Think about the core flow the user will use the product
     - High level estimation: data volumn, peak traffic
   - Non-functional requirements:
     - Different devices: desktop, mobile, tablets - think of SSR (can't use window, should use CSS media queries)
