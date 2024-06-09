@@ -8,7 +8,7 @@ RADIO framework
 - **Interface Definition (API)**: Define the interface (API) between components in the product, functionality of each API, their parameters and responses.
 - **Optimizations and Deep Dive**: Discuss about possible optimization opportunities and specific areas of interest when building the product.- Requirements
 
-## General Requirements: Understanding the problem and the goal
+## Requirements Exploration
 
 It's expected to clarify the scope and requirements needed in the discussion
 
@@ -28,6 +28,8 @@ It's expected to clarify the scope and requirements needed in the discussion
     - UX: smooth experience (rendering page and navigation), animation, handle requests (loading, errors, success, try again)
 
 ## High-Level Architecture
+
+Identify the key components of the product and how they are related to each other
 
 - UI / mockup for the problem
   - UI
