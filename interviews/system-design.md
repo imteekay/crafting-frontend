@@ -74,6 +74,7 @@ Describe the various data entities, the fields they contain and which component(
     - Indexed DB: more complex DB
       - Large capacity, it's fast, available in service workers
       - Not a long term data storage (ITP - data deleted after 7 days)
+      - Good for large amount of data, complex data
 
 ## Interface Definition (API)
 
