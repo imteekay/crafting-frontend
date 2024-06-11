@@ -114,7 +114,7 @@ Describe the various data entities, the fields they contain and which component(
 ## Going even deeper
 
 - Performance
-  In the front end, performance typically refers to a few things - loading speed, how fast the UI responds to user interactions and memory space (heap) required by the component.
+  - In front end, performance typically refers to a few things - loading speed, how fast the UI responds to user interactions and memory space (heap) required by the component.
   - Network performance > Bundles
     - Small bundles / LazyLoading: vendor, page1, page2
     - Pre-fetching for other parts of the flow
@@ -132,7 +132,7 @@ Describe the various data entities, the fields they contain and which component(
     - JavaScript in a browser is single-threaded. The browser can only do execute one line of code at any one time. The less work (JavaScript executed, DOM updates) the component has to do when a user does something on the page, the faster the component can update the UI to respond to the changes.
   - Memory space - The more memory your component takes up on the page, the slower the browser performs and the experience will feel sluggish/janky. If your component has to render hundreds/thousands of items (e.g. number of images in a carousel, number of items in a selector), memory space might become significant.
 - User Experience
-  UX might not fall squarely under engineering but good front end engineers have a good understanding of UX and build UI with great UX. There are too many UX practices to be aware of, but the most common ones/low hanging fruits are:
+  - UX might not fall squarely under engineering but good front end engineers have a good understanding of UX and build UI with great UX. There are too many UX practices to be aware of, but the most common ones/low hanging fruits are:
   - Reflect the state of the component to the user - If there's a pending background request, show a spinner. If there's an error, make sure to display it instead of silently failing.
   - Display an empty state if there are no items in a list, instead of not rendering anything.
   - Destructive actions should have a confirmation step, especially irreversible ones.
