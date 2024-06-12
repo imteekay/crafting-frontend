@@ -43,6 +43,10 @@ Identify the key components of the product and how they are related to each othe
   - Where do we store the client state?
   - User behavior: e.g. Open dialog, click buttons, click a link, comment, create a post
   - Managing URL: depending on the url, it will fetch something else
+- Rendering Architecture
+  - Client side rendering
+  - Server side rendering
+  - Streaming SSR
 
 ## Data Model
 
