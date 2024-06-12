@@ -152,4 +152,6 @@ Describe the various data entities, the fields they contain and which component(
     - Ensure that elements can be focused and tab order within the component is correct
   - Accessibility is part of UX but will be covered in a later section
 - SEO
+  - Friendly URL
+    - Index URL for the search with pre-selected filters: the user when clicking the link, it renders the search page with the pre-selected filters
 - Accessibility
