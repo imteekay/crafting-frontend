@@ -126,7 +126,8 @@ Describe the various data entities, the fields they contain and which component(
     - Cache requests
       - Service workers/web workers
       - libraries like react-query / swr to get the data from cache and revalidate when it is stale
-  - Infinite scroll / Long list: Sliding Window - render the nodes that are only showing in the window
+  - Infinite scroll / Long list: Sliding Window
+    - Render the nodes that are only showing in the window
   - Page Stack: when clicking the back button | the bad part: the stack can be very big, we need to manage the stack size to not use too much memory in the browser
   - Small images/images size based on the device
   - Rendering performance > SSR
@@ -134,6 +135,7 @@ Describe the various data entities, the fields they contain and which component(
   - Responsiveness to user interactions
     - If a user interaction results in displaying of data that has to be loaded over the network, there will be a delay between the user interaction and updating of the UI. Minimizing that delay or removing it entirely is the key to improving responsiveness.
     - JavaScript in a browser is single-threaded. The browser can only do execute one line of code at any one time. The less work (JavaScript executed, DOM updates) the component has to do when a user does something on the page, the faster the component can update the UI to respond to the changes.
+    - Tracking events: postpone events and run them only on the browser's idle time
   - Memory space - The more memory your component takes up on the page, the slower the browser performs and the experience will feel sluggish/janky. If your component has to render hundreds/thousands of items (e.g. number of images in a carousel, number of items in a selector), memory space might become significant.
 - User Experience
   - UX might not fall squarely under engineering but good front end engineers have a good understanding of UX and build UI with great UX. There are too many UX practices to be aware of, but the most common ones/low hanging fruits are:
